@@ -1,80 +1,79 @@
-/* Estilos do menu */
-
-/* Reset para o menu */
+/* Reset para garantir que o layout funcione corretamente */
 *,
 *::after, *::before {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-/* Navegação */
-nav {
-  background-color: #BD966D;
-  opacity: 0.7;
+
+
+/* Estilo para o botão de menu */
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 13px;
 }
 
-/* Botão sandwich */
-label {
-  display: block;
-  font-size: 22px;
-  padding: 5px;
-  cursor: pointer;
+/* Estilo para as linhas do botão */
+.menu-btn div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
 }
 
-#toggle {
-  display: none;
-}
-
-/* Menu básico */
+/* Menu (inicialmente escondido) */
 .menu {
-  text-align: center;
-  flex-direction: column;
-  display: none; /* Escondido por padrão */
-  width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+}
+
+.menu.active {
+    display: flex;
 }
 
 .menu li {
-  padding: 7px 10px;
-  list-style-type: none;
+    padding: 15px;
+    text-align: center;
 }
 
-.menu li:hover {
-  cursor: pointer;
-  background-color: #8f6e4b;
-  color: white;
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
-/* Mostrar menu ao clicar no toggle */
-.sandwich #toggle:checked + .menu {
-  display: flex;
+.menu a:hover {
+    color: #00bcd4;
 }
 
-/* Menu grid opcional */
-.sandwich #toggle:checked + .menu.grid {
-  display: grid;
-}
-
-/* Estilo Desktop */
-@media screen and (min-width: 576px) {
-  .menu {
-    display: flex; /* Exibe menu em linha */
-    flex-direction: row;
-  }
-
-  .menu:not(.grid) {
-    display: flex;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: auto auto auto 1fr;
-  }
-
-  .menu > *:last-child {
-    margin-left: auto;
-  }
-
-  label {
-    display: none; /* Esconde o botão sandwich */
-  }
+/* Responsividade */
+@media (min-width: 768px) {
+    .menu-btn {
+        display: none;
+    }
+    .menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .menu li {
+        padding: 10px 20px;
+    }
 }

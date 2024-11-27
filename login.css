@@ -1,0 +1,17 @@
+
+/* Estilo para o botão de login */
+.login-btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.login-btn .login-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
