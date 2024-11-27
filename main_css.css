@@ -1,0 +1,26 @@
+/* Estilos gerais da página */
+
+/* Reset geral */
+*,
+*::after, *::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {  
+  font-family: Verdana, Tahoma, sans-serif; 
+  color: #27190a;
+  font-size: 90%;
+}
+
+/* Footer */
+footer {
+  background-color: #BD966D;
+  display: flex;
+}
+
+footer a {
+  padding: 7px 10px;
+  color: white;
+  background-color: #8f6e4b;
+}

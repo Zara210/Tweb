@@ -1,0 +1,80 @@
+/* Estilos do menu */
+
+/* Reset para o menu */
+*,
+*::after, *::before {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navegação */
+nav {
+  background-color: #BD966D;
+  opacity: 0.7;
+}
+
+/* Botão sandwich */
+label {
+  display: block;
+  font-size: 22px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#toggle {
+  display: none;
+}
+
+/* Menu básico */
+.menu {
+  text-align: center;
+  flex-direction: column;
+  display: none; /* Escondido por padrão */
+  width: 100%;
+}
+
+.menu li {
+  padding: 7px 10px;
+  list-style-type: none;
+}
+
+.menu li:hover {
+  cursor: pointer;
+  background-color: #8f6e4b;
+  color: white;
+}
+
+/* Mostrar menu ao clicar no toggle */
+.sandwich #toggle:checked + .menu {
+  display: flex;
+}
+
+/* Menu grid opcional */
+.sandwich #toggle:checked + .menu.grid {
+  display: grid;
+}
+
+/* Estilo Desktop */
+@media screen and (min-width: 576px) {
+  .menu {
+    display: flex; /* Exibe menu em linha */
+    flex-direction: row;
+  }
+
+  .menu:not(.grid) {
+    display: flex;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto 1fr;
+  }
+
+  .menu > *:last-child {
+    margin-left: auto;
+  }
+
+  label {
+    display: none; /* Esconde o botão sandwich */
+  }
+}
