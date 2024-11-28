@@ -6,5 +6,5 @@ const menu = document.getElementById('menu');
 menuBtn.addEventListener('click', () => {
     // Alterna a classe 'active' para mostrar ou esconder o menu
     menu.classList.toggle('active');
-    menuBtn.classList.toggle('active');
+ 
 });
