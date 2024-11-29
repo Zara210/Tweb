@@ -2,12 +2,9 @@
 /* Estilo para o botão de login */
 .login-btn {
     color: white;
-    padding: 5px;
 }
 
 .login-btn img {/*.login-btn .login-icon*/
     width: 40px;
-    height: 40px;
-    margin-right: 5px;
-    
+    height: 40px;    
 }

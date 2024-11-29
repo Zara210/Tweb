@@ -10,6 +10,9 @@ body {
     box-sizing: border-box;
     
 }
+body.menu-open {
+    overflow: hidden; /* Remove o scroll do navegador */
+}
 
 /* Barra de navegação geral */
 nav {
@@ -35,7 +38,7 @@ nav {
 .nav-buttons {
     display: flex;
     justify-content: flex-end;  /* Alinha os botões à direita */
-    align-items: center;  /* Alinha os botões verticalmente */
+    
 }
 
 .nav-buttons .nav-btn:last-child{
@@ -51,6 +54,7 @@ nav {
     cursor: pointer;
     width: 40px;
     height: 40px;
+    
 }
 
 /* Link ativo no menu */
