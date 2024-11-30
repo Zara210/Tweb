@@ -1,47 +1,87 @@
 /* Estilos principais da página */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Corpo da página */
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: white;
     height: 100%;
-    box-sizing: border-box;
-    
-}
-body.menu-open {
-    overflow: hidden; /* Remove o scroll do navegador */
 }
 
-/* Barra de navegação geral */
+body.menu-open {
+    overflow: hidden;
+}
+
+.alerta-banner {
+    display: flex; /* Usando flexbox para controlar o layout */
+    justify-content: flex-start; /* Alinha o conteúdo à direita */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #fffcd4;
+    color: 000000;
+    padding: 0px 10px; /* Ajuste o padding conforme necessário */
+    text-align: right; /* Garante que o texto fique à direita */
+    border-bottom: 0.27rem solid #ffeb3b;
+    width: 100%; /* Ocupa a largura total da página */
+    height: 2.5rem; /* Altura fixa do header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra abaixo do banner */
+}
+
+/* Torna os <p> inline para ficarem na mesma linha */
+.alerta-banner p {
+    display: inline;
+    margin-right: 10px;  /* Ajusta o espaçamento entre os textos */
+}
+
+/* Fonte para o primeiro texto (4/5) */
+.alerta-banner .nota {
+    font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+/* Fonte para o segundo texto */
+.alerta-banner .descricao {
+    font-family: "Lato", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+/* Estilos do nav (Menu) */
 nav {
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     background-color: white;
     color: black;
     position: sticky;
-    top: 0;
-    left: 0;
+    top: 0; /* Certifica-se de que o navbar fica no topo */
+    padding: 10px 20px;
     width: 100%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);  /* Sombra sutil abaixo */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil abaixo */
+    z-index: 10; /* Garante que o nav fique acima de outros conteúdos */
 }
 
 /* Logo */
 .logo {
-    max-height: 20px;  /* Defina a altura máxima para o logo */
+    max-height: 20px; /* Defina a altura máxima para o logo */
     width: auto;
 }
 
 .nav-buttons {
     display: flex;
-    justify-content: flex-end;  /* Alinha os botões à direita */
-    
+    justify-content: flex-end; /* Alinha os botões à direita */
 }
 
-.nav-buttons .nav-btn:last-child{
+.nav-buttons .nav-btn:last-child {
     display: none;
 }
 
@@ -54,7 +94,6 @@ nav {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    
 }
 
 /* Link ativo no menu */
@@ -63,8 +102,4 @@ a {
     color: inherit;
 }
 
-/* Estilos adicionais (se necessário) */
-h1, p {
-    margin: 20px;
-    padding: 10px;
-}
+ 
