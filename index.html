@@ -54,20 +54,47 @@
         <div class="menu-container" id="menu">
             <!-- Lista principal do menu -->
             <ul class="menu-list">
-                <li><a href="#home">Viajar</a></li>
-                <li><a href="#sobre">Gerir reserva</a></li>
+                <li class="has-submenu">
+                    <a href="#viajar">Viajar <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="#explorar">Explorar</a></li>
+                        <li><a href="#reservar">Reservar</a></li>
+                        <li><a href="#viajar-na-tap">Viajar na TAP</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#gerirreserva">Gerir reserva <span class="arrow">&#9662;</span></a>
+                    <ul class="submenu">
+                        <li><a href="#gerir-servicos">Gerir e adicionar serviços à reserva</a></li>
+                        <li><a href="#preparar-viagem">Preparar a viagem</a></li>
+                    </ul>
+                </li>
                 <li><a href="#servicos">Check-in</a></li>
                 <li><a href="#portfolio">Antes da partida</a></li>
                 <li><a href="#contato">TAP Miles&Go</a></li>
                 <li><a href="#contato">Ajuda</a></li>
             </ul>
+            
 
-            <!-- Seção extra separada -->
-            <div class="extra-section">
-                <p>FLYTAP</p>
-                <a href="#faq">FAQ</a>
-                <a href="#suporte">Suporte</a>
-                <a href="#termos">Termos e Condições</a>
+        <!-- Seção extra separada -->
+        <div class="flytap-box">
+            <p>FLYTAP</p>
+            <a href="#inti">INSTITUCIONAL</a>
+            <a href="#tapcorporate">TAP CORPORATE</a>
+            <a href="#tapaircargo">TAP AIR CARGO</a>
+            <a href="#tapsotre">TAP STORE</a>
+            <a href="#credito">Intermediação de Crédito</a>
+        </div>
+        <div class="footer-menu"> 
+            <!-- Seção requesito -->
+            <div class="requesito">
+                <img src="img\warning-1-svgrepo-com.svg">
+                <p>Requesitos de viagem</p>
+            </div>
+            <!-- Seção portugal -->
+            <div class="portugal">
+                <img src="img\flag-portugal.svg">
+                <p>Portugal/Português</p>
             </div>
         </div>
     </nav>
