@@ -50,59 +50,107 @@
                 <img src="img/x.svg" alt="Fechar">
             </button>
         </div>
-
        <!-- Menu -->
         <div class="menu-container" id="menu">
             <!-- Lista principal do menu -->
             <ul class="menu-list">
                 <li class="has-submenu">
-                    <a href="#viajar">Viajar</a>
+                    <div class="menu-item">
+                        <a href="#viajar">Viajar</a> <!-- Removido 'menu-item-main' -->
+                    </div>
                     <ul class="submenu">
-                        <li><a href="#explorar">Explorar <span class="arrow">&#x203A;</span></a></li>
-                        <li><a href="#reservar">Reservar <span class="arrow">&#x203A;</span></a></li>
-                        <li><a href="#viajar-na-tap">Viajar na TAP <span class="arrow">&#x203A;</span></a></li>
+                        <li class="has-submenu">
+                            <div class="menu-item">
+                                <a href="#explorar">Explorar <span class="arrow">&#x203A;</span></a>
+                            </div>
+                            <ul class="submenu">
+                                <li><div class="menu-item"><a href="#destino-tap">Destinos TAP</a></div></li>
+                                <li><div class="menu-item"><a href="#inspiracao-viagem">Inspiração para sua viagem</a></div></li>
+                                <li><div class="menu-item"><a href="#pesq-preco">Pesquisa por preço</a></div></li>
+                                <li><div class="menu-item"><a href="#melhor-oferta">Melhores ofertas</a></div></li>
+                                <li><div class="menu-item"><a href="#promo">Promoções</a></div></li>
+                            </ul>
+                        </li>
+
+                        <li><div class="menu-item"><a href="#reservar">Reservar <span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#viajar-na-tap">Viajar na TAP <span class="arrow">&#x203A;</span></a></div></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="#gerirreserva">Gerir reserva </a>
+                    <div class="menu-item">
+                        <a href="#gerirreserva">Gerir reserva</a> <!-- Removido 'menu-item-main' -->
+                    </div>
                     <ul class="submenu">
-                        <li><a href="#gerir-servicos">Gerir e adicionar serviços à reserva <span class="arrow">&#x203A;</span> </a></li>
-                        <li><a href="#preparar-viagem">Preparar a viagem <span class="arrow">&#x203A;</span> </a></li>
+                        <li class="has-submenu">
+                            <div class="menu-item">
+                                <a href="#gerir-servicos">Gerir e adicionar serviços à reserva <span class="arrow">&#x203A;</span></a>
+                            </div>
+                            <ul class="submenu">
+                                <li><div class="menu-item"><a href="#gestao_reserva">Gestão da reserva</a></div></li>
+                                <li><div class="menu-item"><a href="#extras-upgrades">Extras e Upgrades</a></div></li>
+                                <li><div class="menu-item"><a href="#aludar-viatura">Alugar uma viatura</a></div></li>
+                                <li><div class="menu-item"><a href="#fatura-online">Fatura online</a></div></li>
+                                <li><div class="menu-item"><a href="#tap-vouchers">TAP Vouchers</a></div></li>
+                                <li><div class="menu-item"><a href="#cancelamento-reembolso">Cancelamento e reembolso</a></div></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <div class="menu-item">
+                                <a href="#preparar-viagem">Preparar a viagem <span class="arrow">&#x203A;</span></a>
+                            </div>
+                            <ul class="submenu">
+                                <li><div class="menu-item"><a href="#bagagem">Bagagem</a></div></li>
+                                <li><div class="menu-item"><a href="#t-checklist">Travel checklist</a></div></li>
+                                <li><div class="menu-item"><a href="#neces-especiais">Necessidades especiais</a></div></li>
+                                <li><div class="menu-item"><a href="#medo-voar">Perder o medo de voar</a></div></li>
+                                <li><div class="menu-item"><a href="#documentos">Documentacão</a></div></li>
+                                <li><div class="menu-item"><a href="#req-viagem">Requsitos viagem</a></div></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
-                    <li class="has-submenu">
-                    <a href="#check-in">Check-in</a>
+            
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a href="#check-in">Check-in</a> <!-- Removido 'menu-item-main' -->
+                    </div>
                     <ul class="submenu">
-                        <li><a href="#efe-check-in">Efetuar o Check-in<span class="arrow">&#x203A;</span> </a></li>
-        
+                        <li><div class="menu-item"><a href="#efe-check-in">Efetuar o Check-in<span class="arrow">&#x203A;</span> </a></div></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="#ante-partida">Antes da partida</a>
+                    <div class="menu-item">
+                        <a href="#ante-partida">Antes da partida</a> <!-- Removido 'menu-item-main' -->
+                    </div>
                     <ul class="submenu">
-                        <li><a href="#experiencia">Expreiência TAP <span class="arrow">&#x203A;</span> </a></li>
-                        <li><a href="#aeroport">No aeroport <span class="arrow">&#x203A;</span> </a></li>
-                        <li><a href="#bordo">A bordo <span class="arrow">&#x203A;</span> </a></li>
-                    </ul>
-                    </li>
-                <li class="has-submenu">
-                    <a href="#tap-miles-go">TAP Miles&Go</a>
-                    <ul class="submenu">
-                        <li><a href="#gtap-miles-go">O TAP Miles&Go<span class="arrow">&#x203A;</span> </a></li>
-                        <li><a href="#acul-milhas">Acumular milhas<span class="arrow">&#x203A;</span> </a></li>
-                        <li><a href="#usar-milhas">Usar milhas<span class="arrow">&#x203A;</span> </a></li>
-                        <li><a href="#promoções">Promoções <span class="arrow">&#x203A;</span> </a></li>
+                        <li><div class="menu-item"><a href="#experiencia">Experiência TAP <span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#aeroport">No aeroporto <span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#bordo">A bordo <span class="arrow">&#x203A;</span></a></div></li>
                     </ul>
                 </li>
                 <li class="has-submenu">
-                    <a href="#ajuda">Ajuda</a>
+                    <div class="menu-item">
+                        <a href="#tap-miles-go">TAP Miles&Go</a> <!-- Removido 'menu-item-main' -->
+                    </div>
                     <ul class="submenu">
-                        <li><a href="#apoio-cliente">Apoio Cliente <span class="arrow">&#x203A;</span> </a></li>
-                        <li><a href="#info-util">Informções Úteis<span class="arrow">&#x203A;</span> </a></li>
+                        <li><div class="menu-item"><a href="#gtap-miles-go">O TAP Miles&Go<span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#acul-milhas">Acumular milhas<span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#usar-milhas">Usar milhas<span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#promoções">Promoções <span class="arrow">&#x203A;</span></a></div></li>
                     </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a href="#ajuda">Ajuda</a> <!-- Removido 'menu-item-main' -->
+                    </div>
+                    <ul class="submenu">
+                        <li><div class="menu-item"><a href="#apoio-cliente">Apoio Cliente <span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#info-util">Informações Úteis<span class="arrow">&#x203A;</span></a></div></li>
+                    </ul>
+                </li>
             </ul>
             
-
+        
         <!-- Seção extra separada -->
         <div class="flytap-box">
             <p>FLYTAP</p>
@@ -126,14 +174,22 @@
         </div>
     </nav>
     <!-- Conteúdo do site -->
-    <p>1</p><br>
-    <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br>    
-    <p>1</p><br> <p>1</p><br> 
-       <!-- Footer do menu -->
+     <!-- Página principal -->
+    <div class="content-main">
+        <!-- Conteúdo da página principal -->
+        <h1>Bem-vindo à página principal</h1>
+        <p>Este é o conteúdo da página principal.</p><br>
+        <p>1</p><br>
+        <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br>    
+        <p>1</p><br> <p>1</p><br> 
+        <!-- Outros conteúdos -->
+         <!-- Footer do menu -->
        <div class="menu">
         <p>&copy; 2024 Minha Empresa</p>
         <p><a href="#privacidade">Política de Privacidade</a></p>
     </div>
+    </div>
+       
 
 </body>
 </html>
