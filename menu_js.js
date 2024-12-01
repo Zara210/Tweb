@@ -7,26 +7,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Abrir o menu
     menuBtn.addEventListener('click', () => {
-        menu.style.display = 'flex'; // Mostra o menu principal
-        nav.classList.add('menu-open'); // Adiciona uma classe para estilização
-        body.classList.add('menu-open'); // Adiciona o fundo escurecido na área content-main
+        menu.classList.add('menu-open'); // Adiciona a classe para mostrar o menu
+        nav.classList.add('menu-open'); // Adiciona a classe para estilização
+        body.classList.add('menu-open'); // Adiciona o fundo escurecido
         body.style.overflow = 'hidden'; // Desativa o scroll global
     });
 
     // Fechar o menu
     closeBtn.addEventListener('click', () => {
-        menu.style.display = 'none'; // Oculta o menu principal
+        menu.classList.remove('menu-open'); // Remove a classe para ocultar o menu
         nav.classList.remove('menu-open'); // Remove a classe de estilização
-        body.classList.remove('menu-open'); // Remove o fundo escurecido na área content-main
+        body.classList.remove('menu-open'); // Remove o fundo escurecido
         body.style.overflow = ''; // Restaura o scroll global
     });
 
-    // Fechar o menu ao clicar fora (fechar o menu e o fundo escurecido)
+    // Fechar o menu ao clicar fora
     document.addEventListener('click', (e) => {
         if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-            menu.style.display = 'none'; // Oculta o menu principal
-            nav.classList.remove('menu-open'); // Remove a classe de estilização
-            body.classList.remove('menu-open'); // Remove o fundo escurecido na área content-main
+            menu.classList.remove('menu-open');
+            nav.classList.remove('menu-open');
+            body.classList.remove('menu-open');
             body.style.overflow = ''; // Restaura o scroll global
         }
     });
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Gerenciar submenus de segundo nível (sub-submenu)
+    // Gerenciar submenus de segundo nível
     const submenuItems = document.querySelectorAll('.submenu li.has-submenu > .menu-item');
 
     submenuItems.forEach(item => {

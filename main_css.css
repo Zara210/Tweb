@@ -24,6 +24,7 @@ body.menu-open {
 /* Conteúdo principal da página */
 .content-main {
     position: relative;
+    min-height: 100dvh; 
 }
 
 

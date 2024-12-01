@@ -148,18 +148,11 @@
     padding: 5px;
 }
 
-/* Mostrar/Esconder menu */
-nav.menu-open .nav-buttons > .nav-btn {
-    display: none;
-}
-
-nav.menu-open .nav-buttons .nav-btn:last-child {
-    display: flex;
-}
-
 nav.menu-open .menu-container {
     display: flex;
 }
+
+
 
 /* Flytap */
 .flytap-box {
@@ -211,19 +204,46 @@ nav.menu-open .menu-container {
     height: 24px;
 }
 
+
+
 /* Responsividade */
-@media (min-width: 767px) {
+@media screen and (max-width: 767px) {
+    /* Mostrar/Esconder menu */
+    nav.menu-open .nav-buttons > .nav-btn {
+        display: none;
+    }
+
+    nav.menu-open .nav-buttons .nav-btn:last-child {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) {
     /* Menu no lado direito */
     .menu-container {
         border-top: 2px solid #f5f5f5;
         left: auto;
-        top: 60x;
+        top: 60px;
         right: 0;
         width: 50%;
         height: 100dvh;
         max-height: calc(100dvh - 60px);
         background-color: white;
     }
+    
+    /* Os botões de pesquisa e perfil continuam visíveis */
+    nav.menu-open .nav-buttons .profile-btn,
+    nav.menu-open .nav-buttons .search-btn {
+        display: flex;
+    }
 
+    /* Ocultar o botão de menu */
+    nav.menu-open .nav-buttons .menu-btn {
+        display: none;
+    }
+
+    /* Exibir o botão de fechar */
+    nav.menu-open .nav-buttons .close-btn {
+        display: flex;
+    }
 }
-
