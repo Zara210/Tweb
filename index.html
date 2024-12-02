@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste-FlyTap</title>
+
+    <!-- Inclusão dos arquivos CSS -->
+    <link rel="stylesheet" href="main_css.css">  <!-- Estilos globais -->
+    <link rel="stylesheet" href="menu_css.css">  <!-- Estilos específicos do menu -->
+    <link rel="stylesheet" href="login.css">  <!-- Estilos específicos do login -->
+    <link rel="stylesheet" href="search_css.css">  <!-- Estilos específicos do login -->
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    
+    <script src="menu_js.js" defer></script>  <!-- Script do menu -->
+</head>
+<body>
+    <div class="alerta-banner">
+        <p class="nota">4 / 5</p>
+        <p class="descricao">Estado de catastro na região na de Valencia</p>
+    </div>
+    
+    <nav>
+        <img src="img\TAPLogo_102022.svg" alt="Logo" class="logo"> 
+
+        <div class="nav-buttons">
+            <!-- Botão de pesquisa -->
+            <button class="nav-btn search-btn" id="searchBtn">
+                <img src="img\search_icon.svg"> 
+            </button>
+
+            <!-- Botão de Login -->
+            <button class="nav-btn login-btn" id="loginBtn">
+                <img src="img\profile.svg"> <!--alt="Login" class="login-icon"-->
+            </button>
+
+            <!-- Botão do Menu -->
+            <button class="nav-btn menu-btn" id="menuBtn">
+                <img src="img/menu_icon.svg"> 
+            </button>
+              <!-- Botão do Close -->
+            <button class="nav-btn close-btn" id="closeBtn">
+                <img src="img/x.svg" alt="Fechar">
+            </button>
+        </div>
+       <!-- Menu -->
+        <div class="menu-container" id="menu">
+            <!-- Lista principal do menu -->
+            <ul class="menu-list">
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a href="#viajar">Viajar</a> <!-- Removido 'menu-item-main' -->
+                    </div>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <div class="menu-item">
+                                <a href="#explorar">Explorar <span class="arrow">&#x203A;</span></a>
+                            </div>
+                            <ul class="submenu">
+                                <li><div class="menu-item"><a href="#destino-tap">Destinos TAP</a></div></li>
+                                <li><div class="menu-item"><a href="#inspiracao-viagem">Inspiração para sua viagem</a></div></li>
+                                <li><div class="menu-item"><a href="#pesq-preco">Pesquisa por preço</a></div></li>
+                                <li><div class="menu-item"><a href="#melhor-oferta">Melhores ofertas</a></div></li>
+                                <li><div class="menu-item"><a href="#promo">Promoções</a></div></li>
+                            </ul>
+                        </li>
+
+                        <li><div class="menu-item"><a href="#reservar">Reservar <span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#viajar-na-tap">Viajar na TAP <span class="arrow">&#x203A;</span></a></div></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a href="#gerirreserva">Gerir reserva</a> <!-- Removido 'menu-item-main' -->
+                    </div>
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <div class="menu-item">
+                                <a href="#gerir-servicos">Gerir e adicionar serviços à reserva <span class="arrow">&#x203A;</span></a>
+                            </div>
+                            <ul class="submenu">
+                                <li><div class="menu-item"><a href="#gestao_reserva">Gestão da reserva</a></div></li>
+                                <li><div class="menu-item"><a href="#extras-upgrades">Extras e Upgrades</a></div></li>
+                                <li><div class="menu-item"><a href="#aludar-viatura">Alugar uma viatura</a></div></li>
+                                <li><div class="menu-item"><a href="#fatura-online">Fatura online</a></div></li>
+                                <li><div class="menu-item"><a href="#tap-vouchers">TAP Vouchers</a></div></li>
+                                <li><div class="menu-item"><a href="#cancelamento-reembolso">Cancelamento e reembolso</a></div></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <div class="menu-item">
+                                <a href="#preparar-viagem">Preparar a viagem <span class="arrow">&#x203A;</span></a>
+                            </div>
+                            <ul class="submenu">
+                                <li><div class="menu-item"><a href="#bagagem">Bagagem</a></div></li>
+                                <li><div class="menu-item"><a href="#t-checklist">Travel checklist</a></div></li>
+                                <li><div class="menu-item"><a href="#neces-especiais">Necessidades especiais</a></div></li>
+                                <li><div class="menu-item"><a href="#medo-voar">Perder o medo de voar</a></div></li>
+                                <li><div class="menu-item"><a href="#documentos">Documentacão</a></div></li>
+                                <li><div class="menu-item"><a href="#req-viagem">Requsitos viagem</a></div></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a href="#check-in">Check-in</a> <!-- Removido 'menu-item-main' -->
+                    </div>
+                    <ul class="submenu">
+                        <li><div class="menu-item"><a href="#efe-check-in">Efetuar o Check-in<span class="arrow">&#x203A;</span> </a></div></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a href="#ante-partida">Antes da partida</a> <!-- Removido 'menu-item-main' -->
+                    </div>
+                    <ul class="submenu">
+                        <li><div class="menu-item"><a href="#experiencia">Experiência TAP <span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#aeroport">No aeroporto <span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#bordo">A bordo <span class="arrow">&#x203A;</span></a></div></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a href="#tap-miles-go">TAP Miles&Go</a> <!-- Removido 'menu-item-main' -->
+                    </div>
+                    <ul class="submenu">
+                        <li><div class="menu-item"><a href="#gtap-miles-go">O TAP Miles&Go<span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#acul-milhas">Acumular milhas<span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#usar-milhas">Usar milhas<span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#promoções">Promoções <span class="arrow">&#x203A;</span></a></div></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <div class="menu-item">
+                        <a href="#ajuda">Ajuda</a> <!-- Removido 'menu-item-main' -->
+                    </div>
+                    <ul class="submenu">
+                        <li><div class="menu-item"><a href="#apoio-cliente">Apoio Cliente <span class="arrow">&#x203A;</span></a></div></li>
+                        <li><div class="menu-item"><a href="#info-util">Informações Úteis<span class="arrow">&#x203A;</span></a></div></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        
+        <!-- Seção extra separada -->
+        <div class="flytap-box">
+            <p>FLYTAP</p>
+            <a href="#inti">INSTITUCIONAL</a>
+            <a href="#tapcorporate">TAP CORPORATE</a>
+            <a href="#tapaircargo">TAP AIR CARGO</a>
+            <a href="#tapsotre">TAP STORE</a>
+            <a href="#credito">Intermediação de Crédito</a>
+        </div>
+        <div class="footer-menu"> 
+            <!-- Seção requesito -->
+            <div class="requesito">
+                <img src="img\warning-1-svgrepo-com.svg">
+                <p>Requesitos de viagem</p>
+            </div>
+            <!-- Seção portugal -->
+            <div class="portugal">
+                <img src="img\flag-portugal.svg">
+                <p>Portugal/Português</p>
+            </div>
+        </div>
+    </nav>
+    <!-- Conteúdo do site -->
+     <!-- Página principal -->
+    <div class="content-main">
+        <!-- Conteúdo da página principal -->
+        <h1>Bem-vindo à página principal</h1>
+        <p>Este é o conteúdo da página principal.</p><br>
+        <p>1</p><br>
+        <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br>    
+        <p>1</p><br> <p>1</p><br> 
+        <!-- Outros conteúdos -->
+         <!-- Footer do menu -->
+        <p>&copy; 2024 Minha Empresa</p>
+        <p><a href="#privacidade">Política de Privacidade</a></p>
+    </div>
+</body>
+</html>
