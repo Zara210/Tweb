@@ -63,7 +63,7 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    padding: 17px 16px;
+    padding: 12px;
     cursor: pointer;
     align-items: center; /* Alinha os itens na vertical */
 }
@@ -80,6 +80,7 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    padding: 5px;
 }
 
 /* Borda inferior apenas nos itens principais */
@@ -108,7 +109,7 @@
     flex-direction: column;
     width: 100%;
     position: relative;
-    margin-top: 16px;
+    margin-top: 15px;
 }
 .submenu li a {
     color: #3a970e;
@@ -207,7 +208,7 @@ nav.menu-open .menu-container {
 
 
 /* Responsividade */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     /* Mostrar/Esconder menu */
     nav.menu-open .nav-buttons > .nav-btn {
         display: none;
