@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="menu_css.css">  <!-- Estilos específicos do menu -->
     <link rel="stylesheet" href="login.css">  <!-- Estilos específicos do login -->
     <link rel="stylesheet" href="search_css.css">  <!-- Estilos específicos do login -->
+    <link rel="stylesheet" href="slider\slider.css"> <!-- Estilos específicos do slider -->
 
     <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
     
     <script src="menu_js.js" defer></script>  <!-- Script do menu -->
+    <script src="slider\slider.js" defer></script>  <!--Script do slider-->
 </head>
 <body>
     <div class="alerta-banner">
@@ -173,12 +175,21 @@
             </div>
         </div>
     </nav>
-    <!-- Conteúdo do site -->
      <!-- Página principal -->
     <div class="overlay"></div>
-        <!-- Conteúdo da página principal -->
-        <h1>Bem-vindo à página principal</h1>
-        <p>Este é o conteúdo da página principal.</p><br>
+        <div class="slider">
+            <div class="slider-wrapper">
+                <img src="slider\img\LAL.jpg" class="slide">
+                <img src="slider\img\BOS.jpg" class="slide">
+                <img src="slider\img\SanF.jpg"  class="slide">
+            </div>
+              <!-- Indicadores --> 
+              <div class="indicadores">
+                <span class="indicador" data-indice="0"></span>
+                <span class="indicador" data-indice="1"></span>
+                <span class="indicador" data-indice="2"></span>
+            </div>
+        </div>
         <p>1</p><br>
         <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br>    
         <p>1</p><br> <p>1</p><br> 
