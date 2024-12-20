@@ -3,7 +3,7 @@
     position: relative;
     margin: 1rem;
     overflow: hidden;  /* Esconde as imagens fora da área visível */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
     border-radius: 8px;
     cursor: pointer;
 }
@@ -152,6 +152,8 @@
         margin: auto;
         z-index: -1px;
         border-radius: 0;
+        position: relative;
+        box-shadow: 0;
     }
 }
 

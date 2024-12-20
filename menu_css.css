@@ -248,3 +248,10 @@ nav.menu-open .menu-container {
         display: flex;
     }
 }
+
+@media screen and (min-width: 1024px) {
+
+    .menu-container{
+        display: none;
+    }
+}

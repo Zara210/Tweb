@@ -15,21 +15,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fechar o menu
     closeBtn.addEventListener('click', () => {
-        menu.classList.remove('menu-open'); // Remove a classe para ocultar o menu
-        nav.classList.remove('menu-open'); // Remove a classe de estilização
-        body.classList.remove('menu-open'); // Remove o fundo escurecido
-        body.style.overflow = ''; // Restaura o scroll global
+        closeMenu();
     });
 
     // Fechar o menu ao clicar fora
     document.addEventListener('click', (e) => {
         if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-            menu.classList.remove('menu-open');
-            nav.classList.remove('menu-open');
-            body.classList.remove('menu-open');
-            body.style.overflow = ''; // Restaura o scroll global
+            closeMenu();
         }
     });
+
+    // Fechar o menu ao redimensionar a tela
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+            closeMenu();
+        }
+    });
+
+    // Função para fechar o menu
+    const closeMenu = () => {
+        menu.classList.remove('menu-open'); // Remove a classe para ocultar o menu
+        nav.classList.remove('menu-open'); // Remove a classe de estilização
+        body.classList.remove('menu-open'); // Remove o fundo escurecido
+        body.style.overflow = ''; // Restaura o scroll global
+    };
 
     // Gerenciar submenus de primeiro nível
     const mainMenuItems = document.querySelectorAll('.menu-list > li.has-submenu > .menu-item'); // Itens com submenus
