@@ -3,9 +3,9 @@
     position: relative;
     margin: 1rem;
     overflow: hidden;  /* Esconde as imagens fora da área visível */
-  
     border-radius: 8px;
     cursor: pointer;
+    user-select: none;
 }
 
 .slider-wrapper {
@@ -25,7 +25,7 @@
     width: 100%;
     object-fit: cover; 
     object-position: center; 
-    filter: brightness(50%); 
+    filter: brightness(40%); 
 }
 
 .texto {
