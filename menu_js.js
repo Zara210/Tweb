@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation(); // Impede a propagação do clique
 
             const submenu = this.nextElementSibling; // Submenu associado
+            const arrowIcon = this.querySelector('.arrow-icon'); // Ícone da seta
             const isOpen = submenu.style.display === 'block'; // Verifica o estado do submenu
 
             // Fecha todos os submenus antes de abrir o submenu atual
@@ -57,9 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isOpen) {
                 submenu.style.display = 'block';
                 this.parentElement.classList.add('open'); // Marca o submenu como aberto
+                arrowIcon.src = "img/up-arrow2-svgrepo-com.svg"; // Muda para seta para cima
             } else {
                 submenu.style.display = 'none';
                 this.parentElement.classList.remove('open'); // Marca o submenu como fechado
+                arrowIcon.src = "img/down-arrow2-svgrepo-com.svg"; // Muda para seta para baixo
             }
         });
     });
@@ -72,15 +75,18 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation(); // Impede a propagação do clique
 
             const submenu = this.nextElementSibling; // Sub-submenu associado
+            const arrowIcon = this.querySelector('.arrow-icon'); // Ícone da seta
             const isOpen = submenu.style.display === 'block'; // Verifica o estado do sub-submenu
 
             // Alterna a visibilidade do sub-submenu
             if (!isOpen) {
                 submenu.style.display = 'block';
                 this.parentElement.classList.add('open'); // Marca o sub-submenu como aberto
+                arrowIcon.src = "img/up-arrow2-svgrepo-com.svg"; // Muda para seta para cima
             } else {
                 submenu.style.display = 'none';
                 this.parentElement.classList.remove('open'); // Marca o sub-submenu como fechado
+                arrowIcon.src = "img/down-arrow2-svgrepo-com.svg"; // Muda para seta para baixo
             }
         });
     });
@@ -93,6 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const openItems = document.querySelectorAll('.has-submenu.open');
         openItems.forEach(item => {
+            const arrowIcon = item.querySelector('.arrow-icon');
+            if (arrowIcon) {
+                arrowIcon.src = "img/down-arrow2-svgrepo-com.svg"; // Reseta a seta para baixo
+            }
             item.classList.remove('open'); // Remove a marcação de aberto
         });
     };

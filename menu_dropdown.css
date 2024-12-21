@@ -52,11 +52,11 @@
 /* Fundo do dropdown */
 .dropdown-background {
     position: fixed;
-    top: 135px;  /* Manter a posição vertical como estava */
+    top: 8.4375em;  /* Manter a posição vertical como estava */
     left: 50%;   /* Centraliza horizontalmente */
     transform: translateX(-50%);  /* Ajusta para centralizar completamente */
     width: 100vw;  /* Ajuste o tamanho conforme necessário */
-    height: 400px;  /* Ajuste o tamanho conforme necessário */
+    height: 20.75em;  /* Ajuste o tamanho conforme necessário */
     background-color: transparent;
     border-radius: 5px;
     z-index: 1;

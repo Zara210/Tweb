@@ -1,9 +1,11 @@
 window.onscroll = function () {
     atualizarNavbar();
+    atualizarDropdownPosition();  // Atualiza a posição do dropdown quando rolar
 };
 
 window.onresize = function () {
     atualizarNavbar(); // Atualiza a navbar também no redimensionamento
+    atualizarDropdownPosition(); // Atualiza a posição do dropdown ao redimensionar
 };
 
 function atualizarNavbar() {
@@ -22,7 +24,6 @@ function atualizarNavbar() {
             logoBranco.style.display = 'none'; // Esconde o logo branco
             logoNormal.style.display = 'block'; // Exibe o logo normal
         }
-
     } else {
         navbar.classList.remove('navbar-scroll'); // Remove a classe "navbar-scroll"
         profileIcon.src = 'img/profile_branco.png'; // Volta para o ícone branco
@@ -43,6 +44,21 @@ function atualizarNavbar() {
     // Adiciona a condição para telas menores que 768px
     if (window.innerWidth < 1024) {
         logoBranco.style.display = 'none'; // Esconde o logo branco
-        logoNormal.style.display = 'block'; // Esconde o logo normal
+        logoNormal.style.display = 'block'; // Exibe o logo normal
     }
+}
+
+// Função para atualizar a posição do dropdown em todos os links com a classe .has-dropdown
+function atualizarDropdownPosition() {
+    // Seleciona todos os itens de navegação com a classe .has-dropdown
+    const dropdowns = document.querySelectorAll('.nav-link-item.has-dropdown .dropdown-background');
+
+    // Itera sobre todos os dropdowns e altera o valor de 'top'
+    dropdowns.forEach(function(dropdownBackground) {
+        if (window.scrollY > 15) {
+            dropdownBackground.style.top = '50px';  // Muda o valor de top para 60px quando há rolagem
+        } else {
+            dropdownBackground.style.top = '135px'; // Restaura o valor original de top quando não há rolagem
+        }
+    });
 }

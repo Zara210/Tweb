@@ -125,12 +125,10 @@
     display: flex;
 }
 
-/* Estilo geral da seta */
-.arrow {
-    font-size: 54px;
-    font-weight: 300; 
-    color: #3a970e; 
-    transform: rotate(90deg); 
+/* Estilo da seta */
+.arrow img {
+    width: 25px;
+    height: auto;
 }
 
 /* Reduzindo a distância entre o submenu e o sub-submenu */
@@ -254,5 +252,5 @@ nav.menu-open .menu-container {
     .menu-container{
         display: none;
     }
-    
+
 }

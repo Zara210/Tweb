@@ -1,0 +1,7 @@
+.container-actions {
+    margin-top: 20px; /* Espaçamento superior */
+    padding: 15px;    /* Preenchimento interno */
+    background-color: #f1f1f1; /* Cor de fundo */
+    text-align: center;  /* Alinhamento do texto */
+    border: 10px red;
+}
