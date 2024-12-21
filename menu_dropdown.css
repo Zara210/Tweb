@@ -1,38 +1,61 @@
-.dropdown {
-    position: relative;
-    display: inline-block;
+/* Links principais na barra de navegação */
+.nav-links {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
 }
 
-.dropdown-content {
+.nav-links-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link-item {
+    position: relative;
+    margin-right: 20px;
+}
+
+/* Estilos dos links principais */
+.nav-link-item > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Efeito ao passar o mouse nos links principais */
+.nav-link-item > a:hover {
+    background-color: #444;
+}
+
+/* Dropdown - ocultar por padrão */
+.dropdown {
     display: none;
     position: absolute;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    padding: 10px;
+    top: 100%;
+    left: 0;
+    background-color: #f1f1f1;
+    min-width: 160px;
     z-index: 1;
 }
 
-.dropdown-content a {
+/* Estilos dos sublinks no dropdown */
+.dropdown li {
+    list-style: none;
+}
+
+.dropdown a {
     color: black;
     text-decoration: none;
-    display: block;
-    padding: 5px 0;
-}
-
-.dropdown:hover .dropdown-content {
+    padding: 12px 16px;
     display: block;
 }
 
-.dropdown-content a:hover {
+.dropdown a:hover {
     background-color: #ddd;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo-container .dropdown {
-    margin-left: 20px;
+/* Mostrar o dropdown ao passar o mouse sobre o link principal */
+.nav-link-item:hover .dropdown {
+    display: block;
 }

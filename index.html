@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="login.css">  <!-- Estilos específicos do login -->
     <link rel="stylesheet" href="search_css.css">  <!-- Estilos específicos do login -->
     <link rel="stylesheet" href="slider\slider.css"> <!-- Estilos específicos do slider -->
+    <link rel="stylesheet" href="menu_dropdown.css">
 
     <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,6 +51,62 @@
         <img src="img\TAPLogo_102022_branco.svg" class="logo_branco"> 
         <img src="img\TAPLogo1024.svg" class="logo_min"> 
 
+
+         <!-- Seção adicionada entre o logo e os botões PC -->
+         <div class="nav-links">
+            <ul class="nav-links-list">
+                <li class="nav-link-item has-dropdown">
+                    <a href="#link1">Link 1</a>
+                    <ul class="dropdown">
+                        <li><a href="#sublink1">Sublink 1.1</a></li>
+                        <li><a href="#sublink2">Sublink 1.2</a></li>
+                        <li><a href="#sublink3">Sublink 1.3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link-item has-dropdown">
+                    <a href="#link2">Link 2</a>
+                    <ul class="dropdown">
+                        <li><a href="#sublink1">Sublink 2.1</a></li>
+                        <li><a href="#sublink2">Sublink 2.2</a></li>
+                        <li><a href="#sublink3">Sublink 2.3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link-item has-dropdown">
+                    <a href="#link3">Link 3</a>
+                    <ul class="dropdown">
+                        <li><a href="#sublink1">Sublink 3.1</a></li>
+                        <li><a href="#sublink2">Sublink 3.2</a></li>
+                        <li><a href="#sublink3">Sublink 3.3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link-item has-dropdown">
+                    <a href="#link4">Link 4</a>
+                    <ul class="dropdown">
+                        <li><a href="#sublink1">Sublink 4.1</a></li>
+                        <li><a href="#sublink2">Sublink 4.2</a></li>
+                        <li><a href="#sublink3">Sublink 4.3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link-item has-dropdown">
+                    <a href="#link5">Link 5</a>
+                    <ul class="dropdown">
+                        <li><a href="#sublink1">Sublink 5.1</a></li>
+                        <li><a href="#sublink2">Sublink 5.2</a></li>
+                        <li><a href="#sublink3">Sublink 5.3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-link-item has-dropdown">
+                    <a href="#link6">Link 6</a>
+                    <ul class="dropdown">
+                        <li><a href="#sublink1">Sublink 6.1</a></li>
+                        <li><a href="#sublink2">Sublink 6.2</a></li>
+                        <li><a href="#sublink3">Sublink 6.3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
         <div class="nav-buttons">
             <!-- Botão de pesquisa -->
             <button class="nav-btn search-btn" id="searchBtn">
@@ -73,12 +130,13 @@
         
         <!--Botões PC-->
         <div class="nav-buttons_pc">
+    
             <!-- Botão de Login -->
             <button class="nav-btn login-btn" id="loginBtn">
                 <img src="img\profile_branco.png"> 
             </button>
 
-             <p class="nav-text">Login e Registo</p>
+             <a class="nav-text">Login e Registo</a>
 
              <!-- Botão de pesquisa -->
              <button class="nav-btn search-btn" id="searchBtn">
