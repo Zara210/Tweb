@@ -41,24 +41,53 @@ body.menu-open .overlay {
     border-bottom: 0.27rem solid #ffeb3b;
     width: 100%;
     height: 2.5rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 10;
+    color: #2c2c2c;
 }
 
-.alerta-banner p {
-    margin-right: 10px;
+
+.alerta-banner .descricao,
+.alerta-banner a{
+    font-family: "Lato", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+.alerta-banner .descricao {
+    margin-left: 10px;
+}
+
+.alerta-banner a{
+    margin-left: auto;
+    color: inherit;
+    display: none;
+    color: #4a4a4a
+}
+
+.alerta-banner a:hover{
+   text-decoration: none;
+}
+
+.alerta-banner .descricao:hover {
+    text-decoration: underline;
 }
 
 .alerta-banner .nota {
     font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 14px;
+}
+
+
+.alerta-banner .nota {
     font-weight: 300;
 }
 
-.alerta-banner .descricao {
-    font-family: "Lato", "Lucida Grande", Tahoma, sans-serif;
-    font-size: 14px;
+.alerta-banner .descricao,
+.alerta-banner a {
     font-weight: bold;
+}
+/* Estilo para as imagens dentro do alerta-banner */
+.alerta-banner .seta-img {
+   display: none;
 }
 
 .custom-nav-bar {
@@ -84,13 +113,16 @@ nav {
     width: auto;
 }
 
-.logo_branco {
-    display: none;
-}
-
+.logo_branco,
 .logo_min {
     display: none;
 }
+
+
+.nav-links{
+    display: none;
+}
+
 
 .nav-buttons {
     display: flex;
@@ -116,14 +148,37 @@ nav {
     display: none;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+
+
+.custom-nav-bar a::after,
+.nav-text::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    transform: translateX(-50%);
+}
+
+.custom-nav-bar a:hover,
+.nav-text:hover {
+    color: #f5f5f5;
+}
+
+.custom-nav-bar a:hover::after,
+.nav-text:hover::after {
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
 }
 
 @media screen and (min-width: 768px) {
     .alerta-banner p {
-        padding: 1.25em;
+        padding: 1em;
     }
 
     .alerta-banner .descricao {
@@ -133,19 +188,21 @@ a {
     .alerta-banner {
         padding: 25px;
     }
+    /* Estilo para as imagens dentro do alerta-banner */
+    .alerta-banner .seta-img {
+        width: 15px;
+        height: 15px;
+        display: block;
+    }
+    .alerta-banner a{
+        display: block;
+    }
+    
 
    
 }
 
 @media screen and (min-width: 1024px) {
-    .alerta-banner p {
-        padding: 1.25em;
-    }
-
-    .alerta-banner {
-        padding: 25px;
-    }
-
     .custom-nav-bar {
         display: flex;
         justify-content: flex-end;
@@ -174,16 +231,15 @@ a {
 
     .custom-nav-bar a {
         color: white;
+        position: relative;
+        padding: 0;  /* Ajuste para que o pseudo-elemento tenha espaço suficiente */
+        text-decoration: none;  /* Removendo sublinhado padrão */
         transition: color 0.3s ease;
     }
-
-    .custom-nav-bar a:hover {
-        text-decoration: underline;
-    }
-
+    
     nav {
         position: fixed;
-        padding: 0 10px;
+        padding: 0 20px;
         background-color: transparent;
         border-bottom: 0;
         z-index: 20;
@@ -201,9 +257,10 @@ a {
 
     .nav-buttons_pc {
         display: flex;
-        align-items: center;  /* Alinha os itens verticalmente */
-        justify-content: flex-end; /* Alinha os itens à direita */
-        color: white;  /* Alinha o texto à direita e define a cor do texto como branco */
+        align-items: center;
+        justify-content: flex-end;
+        color: white;
+        margin-right: 30px;
     }
 
     .nav-text {
@@ -211,15 +268,24 @@ a {
         font-size: 0.875rem;
         font-weight: 500;
         color: white;
-        margin: 0 1.25em 0 0;
+        margin-right: 1.25em;
+        position: relative;  /* Necessário para o pseudo-elemento */
+        padding: 2px;  /* Ajuste para o pseudo-elemento ter o espaço adequado */
+        text-decoration: none;  /* Removendo sublinhado padrão */
     }
+    
 
-    .nav-text:hover{
-        text-decoration: underline;
+
+    /* Links durante o scroll */
+    nav.navbar-scroll .nav-text {
+        color: black; /* Alterar a cor dos links quando o navbar está com scroll */
     }
 
     .logo {
         display: none;
+        max-height: 1.25em;
+        width: auto;
+        margin: 1.25em
     }
 
     .logo_min {
@@ -229,7 +295,7 @@ a {
     }
 }
 
-@media screen and (min-width:1500px){
+@media screen and (min-width:1124px){
 
     .logo_min {
        display:none;
@@ -241,4 +307,10 @@ a {
         width: auto;
         margin: 1.25em
     }
+
+    nav {
+        padding: 0 ;
+       
+    }
+   
 }
