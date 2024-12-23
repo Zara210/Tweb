@@ -1,6 +1,6 @@
 /*Container*/
 .container-actions { 
-    margin: 10px;
+    margin: 0.625em;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     border-top: 9px solid #72be44;
     background-color: #f5f5f5;
     flex-direction: column;
-    padding: 10px;
+    padding: 0.625em;
     width: 100%;
     margin: 0 auto;  
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  
@@ -30,7 +30,7 @@
 
 .container-action img {
     width: 30px;
-    margin-right: 10px;
+    margin-right: 0.625em;
 }
 
 .container-action a {
@@ -79,7 +79,7 @@
 
 /*Expandido*/
 .expanded-content {
-    margin-top: 10px;
+    margin-top: 0.625em;
     display: none;
     width: 100%;
     text-align: left;
@@ -100,7 +100,7 @@
 .por-tipo-voo {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 0.625em 0;
 }
 
 .tipo-voo input[type="radio"],
@@ -183,8 +183,8 @@
 .container-viagem-destino,
 .container-viagem-data
  {
-    padding: 10px;
-    margin: 10px;
+    padding: 0.625em;
+    margin: 0.625em;
     min-height: 80px;
     border: 1px solid #e3e3e3;
     background-color: #ffffff;
@@ -209,15 +209,15 @@
 .codigo-lisboa {
     background-color: #127045; /* Cor de fundo verde */
     color: white; /* Texto branco */
-    padding: 2px 10px; /* Espaçamento interno */
+    padding: 2px 0.625em; /* Espaçamento interno */
     border-radius: 2px; /* Bordas arredondadas */
     font-weight: bold;
     font-size: 16px;
-    margin-right: 10px; /* Espaço entre o "LIS" e "Lisbon, Portugal" */
+    margin-right: 0.625em; /* Espaço entre o "LIS" e "Lisbon, Portugal" */
 }
 
 .origem-texto {
-    padding: 10px;
+    padding: 0.625em;
     margin: 0; /* Remove a margem para manter os elementos na linha */
     color: #333333;
     font-weight: bold;
@@ -239,8 +239,8 @@
 .button-add-TAP button {
     display: block;
     width: 95%;
-    margin: 10px auto 0;
-    padding: 10px 20px;
+    margin: 0.625em auto 0;
+    padding: 0.625em 1.25em;
     background-color: white;
     color: #127045;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
@@ -272,7 +272,7 @@
 }
 
 .container-p{
-    padding: 10px;
+    padding: 0.625em;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
@@ -287,7 +287,7 @@
     margin-left: auto;       /* Centraliza o botão à esquerda */
     margin-right: auto;      /* Centraliza o botão à direita */
     width: 95%;              
-    padding: 15px 20px;     
+    padding: 15px 1.25em;     
     background-color: #72be44;
     color: #2c2c2c;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
@@ -309,7 +309,7 @@
     align-items: center;
     text-align: center;
     width: 100%; /* Ajusta à largura do container */
-    margin: 20px 0; /* Espaçamento acima e abaixo */
+    margin: 1.25em 0; /* Espaçamento acima e abaixo */
 }
 
 .divisor::before,
@@ -317,7 +317,7 @@
     content: '';
     flex: 1; /* Faz as linhas ocuparem o espaço disponível */
     border-bottom: 1px solid #ccc; /* Linha cinza */
-    margin: 0 10px; /* Espaçamento entre a linha e o texto */
+    margin: 0 0.625em; /* Espaçamento entre a linha e o texto */
 }
 
 .divisor span {
@@ -330,18 +330,18 @@
     display: flex;
     flex-direction: column;
     color: black;
-    margin: 10px;
+    margin: 0.625em;
 }
 
 .container-text input{
-    padding:20px 40px;
+    padding:1.25em 40px;
     margin: 5px;
     border: 1px solid #e3e3e3 ;
 }
 
 .container-links {
     background-color: #ededed;
-    margin-top: 10px;
+    margin-top: 0.625em;
     padding: 15px;
     border-radius: 5px;
     width: 100%; 
@@ -351,15 +351,16 @@
 .link {
     display: flex;
     align-items: center;
-    padding: 10px 0;
+    padding: 0.625em 0;
     margin-bottom: 8px; 
 }
 
 .link img.icon1,
-.link img.icon2 {
+.link img.icon2,
+.link img.icon3 {
     width: 34px; 
     height: 34px;
-    margin-right: 10px;
+    margin-right: 0.625em;
 }
 
 .link a,
@@ -429,7 +430,7 @@
 .container-tipo-voo img,
 .container-datas img {
     width: 35px;
-    margin-left: 10px;
+    margin-left: 0.625em;
 }
 
 .selecionar-tipo-voo {
@@ -495,7 +496,7 @@
     height: auto;
     font-size: 16px;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
-    padding: 10px;
+    padding: 0.625em;
 }
 
 
@@ -505,7 +506,7 @@
 }
 
 .resultado {
-    margin-top: 20px;
+    margin-top: 1.25em;
     padding: 15px;
     border: 1px solid #e3e3e3;
     border-radius: 5px;
@@ -514,7 +515,7 @@
 .voos-container {
     display: flex;
     flex-direction: column; /* Alinha os itens em uma única coluna */
-    gap: 20px; /* Espaçamento vertical entre os voos */
+    gap: 1.25em; /* Espaçamento vertical entre os voos */
     margin-top: 15px;
 }
 
@@ -522,7 +523,7 @@
 .voo-cidade{
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    padding: 0.625em;
     background-color: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -538,7 +539,7 @@ h2 {
 
 .voo h3 {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
     color: #333;
 }
 
@@ -551,7 +552,7 @@ h2 {
 .voo-cidade {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 0.625em;
 }
 .voo-cidade p {
     margin: 0;
@@ -568,14 +569,76 @@ h2 {
 
 .footer-container {
     display: flex;
+    flex-direction: column;
     justify-content: center; 
     align-items: center;  
-    border: 2px solid black;
   }
 
 .footer-container-actions{
-    border: 2px solid red;
+    border: 1px solid #ededed;
+    border-radius: 0.625em;
+    width: 100%;
+    padding: 0.625em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 0.625em; 
+    margin: 1.25em;
 }
+    
+.footer-container-action{
+    color: #2c2c2c;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding: 0.625em;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.footer-container-action:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px; 
+    height: 100%;
+    background-color: #ededed; 
+}
+
+.footer-container-action a {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+.footer-container-action a:hover {
+   color: #127045;
+   text-decoration: underline;
+}
+
+.footer-container-action a:hover .icon1{
+    content: url('car-fundo-verde.svg');
+}
+
+.footer-container-action a:hover .icon2{
+    content: url('bus-fundo-verde.svg');
+}
+.footer-container-action a:hover .icon3{
+    content: url('hotel-fundo-verde.svg');
+}
+.footer-container-action a img{
+    width: 30px;
+}
+
 
   .footer-link {
     display: flex;
@@ -604,7 +667,7 @@ h2 {
     .tipo-dados label,
     .por-tipo-voo label {
         text-align: left; /* Alinha o texto dentro do label à esquerda */
-        padding: 5px 10px; /* Ajusta o padding para alinhar o label corretamente */
+        padding: 5px 0.625em; /* Ajusta o padding para alinhar o label corretamente */
     }
 }
 
@@ -622,7 +685,7 @@ h2 {
     .tipo-dados label,
     .por-tipo-voo label {
         text-align: left; /* Alinha o texto dentro do label à esquerda */
-        padding: 5px 20px; /* Ajusta o padding para alinhar o label corretamente */
+        padding: 5px 1.25em; /* Ajusta o padding para alinhar o label corretamente */
     }
       
 
