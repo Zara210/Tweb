@@ -14,7 +14,7 @@ function atualizarNavbar() {
     const logoBranco = document.querySelector('.logo_branco'); // Seleciona o logo branco
     const logoNormal = document.querySelector('.logo'); // Seleciona o logo normal
 
-    // Quando o usuário rolar mais de 20px
+    // Quando o rolar mais de 20px
     if (window.scrollY > 15) {
         navbar.classList.add('navbar-scroll'); // Adiciona a classe "navbar-scroll"
         profileIcon.src = 'img/profile_verde.jpg'; // Altera o ícone para verde
