@@ -1,7 +1,7 @@
 /* Slider CSS */
 .slider {
     position: relative;
-    margin: 1rem;
+    margin: 1em 1em 0 1em;
     overflow: hidden;  /* Esconde as imagens fora da área visível */
     border-radius: 8px;
     cursor: pointer;

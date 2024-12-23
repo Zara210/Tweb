@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     const containerActions = document.querySelectorAll('.container-action');
+    const resultadoVooDiv = document.getElementById('resultado-voo');
 
-   
     containerActions.forEach(container => {
         const headerContainer = container.querySelector('.header-container');
 
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
             containerActions.forEach(otherContainer => {
                 if (otherContainer !== container) {
                     otherContainer.classList.remove('expandido'); 
+                    resultadoVooDiv.style.display = 'none';
                 }
             });
 
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             container.classList.toggle('expandido');
         });
     });
+
 
     document.getElementById('prosseguir-btn').addEventListener('click', function () {
         const tipoVoo = document.getElementById('tipo-voo').value; // Obtém o valor do select
@@ -37,10 +39,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const mes = data.getMonth() + 1; // Mes é 0-indexed (0 = Janeiro)
 
 
-        console.log("Dia selecionado:", dia);
-        console.log("Mês selecionado:", mes);
-        console.log("Mês selecionado:", cidade);
-        console.log("Mês selecionado:", tipoVoo);
+        console.log("dia:", dia);
+        console.log("mes :", mes);
+        console.log("cidade:", cidade);
+        console.log("tipo-voo:", tipoVoo);
+        console.log("--------------------------");
     
       // Geração das informações de voos
         const voo1 = {

@@ -60,7 +60,7 @@ body.menu-open .overlay {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #fffcd4;
+    background-color: #fcfae4;
     padding: 0 10px;
     border-bottom: 0.27rem solid #ffeb3b;
     width: 100%;

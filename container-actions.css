@@ -1,6 +1,6 @@
 /*Container*/
 .container-actions { 
-    margin: 0.625em;
+    margin: 0 0.625em;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -10,16 +10,16 @@
     display: flex;
     align-items: center;
     background-color: #f5f5f5;
-    margin: 5px;
+    margin: 0.3125em;
     color: white;
-    border-radius: 5px;
+    border-radius: 0.3125em;
     cursor: pointer;
-    border: 1px solid #ededed; 
+    border: 0.0625em solid #ededed; 
     transition: border-top 0.3s ease;
 }
 
 .container-action.expandido {
-    border-top: 9px solid #72be44;
+    border-top: 0.5625em solid #72be44;
     background-color: #f5f5f5;
     flex-direction: column;
     padding: 0.625em;
@@ -29,14 +29,14 @@
 }
 
 .container-action img {
-    width: 30px;
+    width: 1.875em;
     margin-right: 0.625em;
 }
 
 .container-action a {
     text-decoration: none;
     color: #2c2c2c;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     font-family: 'Montserrat', 'Montserrat-local-backup', Arial, Helvetica, sans-serif;
 }
@@ -46,7 +46,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 15px 5px;
+    padding: 0.9375em 0.3125em;
     cursor: pointer;
 }
 
@@ -54,7 +54,7 @@
 .header-container a {
     position: relative;
     display: inline-block;
-    padding: 5px;
+    padding: 0.3125em;
     font-family: 'Montserrat', 'Montserrat-local-backup', Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
@@ -65,15 +65,15 @@
     position: absolute;
     top: 0;
     width: 0;  
-    height: 4px;  
-    border-radius: 5px;
+    height: 0.25em;  
+    border-radius: 0.3125em;
     background-color: #127045;  
     transition: width 0.3s ease; 
 }
 
 /* Ao adicionar a classe expandido ao container-action, a borda vai até 33% */
 .container-action.expandido .header-container a::before {
-    width: 25px; 
+    width: 1.5625em; 
 }
 
 
@@ -90,6 +90,37 @@
 }
 
 
+@media screen and (min-width:900px) {
+    .container-actions { 
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-1.5625em);
+        border-top: 0.7625em solid #72be44; 
+        border-radius: 0.325em;
+        margin: 0.9375em;
+    }
+
+    .container-action {
+        margin: 0; 
+        background-color: #f5f5f5;
+        color: white;
+        cursor: pointer; 
+        border: none; 
+        transition: border-top 0.3s ease;
+    }
+
+    /* Quando expandido, não exibe a borda verde */
+    .container-action.expandido {
+        border-top: none; /* Remove a borda superior verde quando expandido */
+        background-color: #f5f5f5;
+        flex-direction: column;
+        padding: 0.625em;
+        width: 100%;
+        margin: 0 auto;  
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  
+    }
+}
 
 
 /*Reservar um Voo*/
@@ -119,7 +150,7 @@
     margin: 0.25em;
     background-color: #ededed;
     color: #2c2c2c;
-    border-radius: 60px;
+    border-radius: 3.75em;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
@@ -145,8 +176,8 @@
 
 /* Checkbox */
 .checkbox-voo {
-    padding: 15px 0;
-    font-size: 16px;
+    padding: 0.9375em 0;
+    font-size: 1rem;
     font-family: 'Lato', Arial, sans-serif;
     color: #2c2c2c;
 }
@@ -157,24 +188,46 @@
 }
 
 .checkbox-voo input[type="checkbox"] {
-    width: 25px;
-    height: 25px;
-    margin: 5px;
+    width: 1.5625em;
+    height: 1.5625em;
+    margin: 0.3125em;
     background-color: #ffffff;
-    border: 2px solid #d0d0d0; /* Borda mais fina e clara */
-    border-radius: 4px;
+    border: 0.125em solid #d0d0d0; /* Borda mais fina e clara */
+    border-radius: 0.25em;
     transition: border-color 0.3s ease;
 }
 
 .checkbox-voo input[type="checkbox"]:hover {
-    border-color: #2c2c2c; /* Cor da borda ao passar o mouse */
+    border-color: #2c2c2c; 
+}
+
+
+.tipo-e-checkbox {
+    display: flex;
+    flex-direction: column; 
+}
+
+
+@media screen and (min-width:900px) {
+
+    
+    .tipo-e-checkbox {
+        flex-direction: row;
+        
+        align-items: center; 
+    }
+    .checkbox-voo {
+        display: flex;
+        flex-direction: row;
+        gap: 1.25em; 
+    }
 }
 
 
 /*Label*/
 .container-viagem,
 .container-estado-voo {
-    font-size: 16px;
+    font-size: 1rem;
     color: #6d6d6d;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
 }
@@ -185,45 +238,40 @@
  {
     padding: 0.625em;
     margin: 0.625em;
-    min-height: 80px;
-    border: 1px solid #e3e3e3;
+    min-height: 5em;
+    border: 0.0625em solid #e3e3e3;
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 0.3125em;
 }
 
 
 .container-viagem-destino,
-.container-viagem-data{
-    display: flex; /* Ativa o flexbox no contêiner */
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-    align-items: center; /* Centraliza verticalmente os itens dentro do contêiner */
+.container-viagem-data,
+.origem-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-
-.origem-container {
-    display: flex; /* Alinha os elementos na mesma linha */
-    align-items: center; /* Alinha verticalmente os itens */
-    justify-content: flex-start; /* Garante que os itens fiquem no início */
-}
 
 .codigo-lisboa {
-    background-color: #127045; /* Cor de fundo verde */
-    color: white; /* Texto branco */
-    padding: 2px 0.625em; /* Espaçamento interno */
-    border-radius: 2px; /* Bordas arredondadas */
+    background-color: #127045; 
+    color: white; 
+    padding: 0.125em 0.625em; 
+    border-radius: 0.125em; 
     font-weight: bold;
-    font-size: 16px;
-    margin-right: 0.625em; /* Espaço entre o "LIS" e "Lisbon, Portugal" */
+    font-size: 1rem;
+    margin-right: 0.625em; /
 }
 
 .origem-texto {
     padding: 0.625em;
-    margin: 0; /* Remove a margem para manter os elementos na linha */
+    margin: 0; 
     color: #333333;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 0.25em;
     flex-grow: 1; /* Faz com que a label ocupe o restante do espaço disponível */
-    white-space: nowrap; /* Impede que o texto "Lisbon, Portugal" quebre em várias linhas */
+    white-space: nowrap; 
 }
 
 .destino-texto{
@@ -233,6 +281,33 @@
 .container-viagem-data{
     display: none;
 }
+
+
+
+@media screen and (min-width:900px) {
+    
+    .container-viagem {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+
+    .container-viagem-origem,
+    .container-viagem-destino,
+    .container-viagem-data {
+        flex-grow: 1; /* Os contêineres internos irão ocupar o máximo de espaço */
+    }
+
+    .container-viagem-data{
+        display: flex;
+    }
+
+    .data-texto{
+        font-style: italic;
+    }
+}
+
+
 
 
 /* Botão */
@@ -245,10 +320,10 @@
     color: #127045;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.875rem;
     border: none; /* Remove as bordas padrão */
-    border-bottom: 2px solid #127045; /* Adiciona borda apenas na parte inferior */
-    border-radius: 5px;
+    border-bottom: 0.125em solid #127045; /* Adiciona borda apenas na parte inferior */
+    border-radius: 0.3125em;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para fundo e cor */
@@ -265,7 +340,7 @@
 .container-login h1,
 .container-reserva h1{
     font-family: 'Montserrat', 'Montserrat-local-backup', Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     color: #2c2c2c;
     
@@ -277,7 +352,7 @@
 }
 
 .container-login p{
-    padding: 8px;
+    padding: 0.5em;
     color: #2c2c2c;
 }
 
@@ -287,14 +362,14 @@
     margin-left: auto;       /* Centraliza o botão à esquerda */
     margin-right: auto;      /* Centraliza o botão à direita */
     width: 95%;              
-    padding: 15px 1.25em;     
+    padding: 0.9375em 1.25em;     
     background-color: #72be44;
     color: #2c2c2c;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3125em;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Transição suave para fundo e cor */
 }
@@ -316,13 +391,13 @@
 .divisor::after {
     content: '';
     flex: 1; /* Faz as linhas ocuparem o espaço disponível */
-    border-bottom: 1px solid #ccc; /* Linha cinza */
+    border-bottom: 0.0625em solid #ccc; /* Linha cinza */
     margin: 0 0.625em; /* Espaçamento entre a linha e o texto */
 }
 
 .divisor span {
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #666; /* Cor do texto */
 }
 
@@ -334,16 +409,28 @@
 }
 
 .container-text input{
-    padding:1.25em 40px;
-    margin: 5px;
-    border: 1px solid #e3e3e3 ;
+    padding:1.25em 2.5em;
+    margin: 0.3125em;
+    border: 0.0625em solid #e3e3e3 ;
+}
+
+@media screen and (min-width:900px) {
+    
+    .container-viagens{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+    .divisor {
+        display: none;
+    }
 }
 
 .container-links {
     background-color: #ededed;
     margin-top: 0.625em;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 0.9375em;
+    border-radius: 0.3125em;
     width: 100%; 
 
 }
@@ -352,14 +439,14 @@
     display: flex;
     align-items: center;
     padding: 0.625em 0;
-    margin-bottom: 8px; 
+    margin-bottom: 0.5em; 
 }
 
 .link img.icon1,
 .link img.icon2,
 .link img.icon3 {
-    width: 34px; 
-    height: 34px;
+    width: 2.125em; 
+    height: 2.125em;
     margin-right: 0.625em;
 }
 
@@ -369,7 +456,7 @@
     align-items: center;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     color: #127045;
 }
 
@@ -391,15 +478,24 @@
 
 }
 
-
-
 .link a .img-link {
-    width: 18px; 
-    height: 18px;
-    margin-left: 5px; 
+    width: 1.125em; 
+    height: 1.125em;
+    margin-left: 0.3125em; 
 }
 
-
+@media screen and (min-width:900px) {
+    
+    .container-links{
+        display: flex;
+        flex-direction: row;
+      
+    } 
+    .container-links .link .img-link {
+        width: 2.00em; /* Aumenta o tamanho da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
 
 /*Chek-in*/
 
@@ -407,8 +503,10 @@
     padding: 0.4375em 3.300em;  
 }
 
-
 /*Estado Voo*/
+
+
+
 
 .por-tipo-voo label{
     padding: 0.4375em 2.300em;  
@@ -416,10 +514,10 @@
 
 .container-tipo-voo,
 .container-datas{
-    border: 1px solid #e3e3e3;
-    padding: 18px;
-    margin: 15px;
-    border-radius: 5px; 
+    border: 0.0625em solid #e3e3e3;
+    padding: 1.125em;
+    margin: 0.9375em;
+    border-radius: 0.3125em; 
     background-color: white;
     display: flex;
     align-items: center; 
@@ -429,26 +527,26 @@
 
 .container-tipo-voo img,
 .container-datas img {
-    width: 35px;
+    width: 2.1875em;
     margin-left: 0.625em;
 }
 
 .selecionar-tipo-voo {
-    margin-left: 15px;
+    margin-left: 0.9375em;
     width: 100%;
 }
 
 .selecionar-tipo-voo label {
     font-style: italic;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .tipo-voo-select {
-    font-size: 16px;
+    font-size: 1rem;
     background: transparent;
     border: none;
     outline: none;
-    border-radius: 5px;
+    border-radius: 0.3125em;
     cursor: pointer;
     width: 100%;
     font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
@@ -456,7 +554,7 @@
 }
 
 .tipo-voo-select option {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .selecionar-data {
@@ -466,18 +564,18 @@
 }
 
 #data-voo {
-    font-size: 15px;
-    margin-top: 5px;
+    font-size: 0.9375em;
+    margin-top: 0.3125em;
     outline: none;
     border: none;
     font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .container-cidade {
-        border: 1px solid #e3e3e3;
-        padding: 18px;
-        margin: 15px;
-        border-radius: 5px; 
+        border: 0.0625em solid #e3e3e3;
+        padding: 1.125em;
+        margin: 0.9375em;
+        border-radius: 0.3125em; 
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -485,7 +583,7 @@
         transition: 0.3s ease;
 }
 .container-cidade label{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .container-cidade input{
@@ -494,10 +592,38 @@
     font-style: italic;
     width: 100%;
     height: auto;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
     padding: 0.625em;
 }
+
+@media screen and (min-width: 900px) {
+
+    .container-estado-voo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite que os itens "quebrem" para a linha seguinte */
+        justify-content: space-between; /* Espaça os itens igualmente */    
+    }
+
+    .container-tipo-voo,
+    .container-datas,
+    .container-cidade {
+        flex-basis: 48%; /* Cada contêiner ocupa 48% da largura disponível, permitindo 2 itens por linha */
+        margin: 0.375em 0; /* Ajusta a margem para não haver grande espaço entre os itens */
+    }
+    #prosseguir-btn{
+        margin-top: 3em;
+    }
+    .resultado {
+        margin-top: 1.25em;
+        padding: 0.9375em;
+        border: 0.0625em solid #ff0000;
+        border-radius: 0.3125em;
+        background-color: #f9f9f9;
+    }
+}
+
 
 
 /* Inicialmente, o resultado dos voos está escondido */
@@ -507,22 +633,22 @@
 
 .resultado {
     margin-top: 1.25em;
-    padding: 15px;
-    border: 1px solid #e3e3e3;
-    border-radius: 5px;
+    padding: 0.9375em;
+    border: 0.0625em solid #e3e3e3;
+    border-radius: 0.3125em;
     background-color: #f9f9f9;
 }
 .voos-container {
     display: flex;
     flex-direction: column; /* Alinha os itens em uma única coluna */
     gap: 1.25em; /* Espaçamento vertical entre os voos */
-    margin-top: 15px;
+    margin-top: 0.9375em;
 }
 
 .voo,
 .voo-cidade{
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.3125em;
     padding: 0.625em;
     background-color: #fff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -531,21 +657,21 @@
 h2 {
     position: relative;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     color: #2c2c2c;
-    padding: 5px;
+    padding: 0.3125em;
     font-family: 'Montserrat', 'Montserrat-local-backup', Arial, Helvetica, sans-serif;
 }
 
 .voo h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-bottom: 0.625em;
     color: #333;
 }
 
 .voo p {
-    margin: 5px 0;
-    font-size: 14px;
+    margin: 0.3125em 0;
+    font-size: 0.875rem;
     color: #555;
 }
 
@@ -556,16 +682,18 @@ h2 {
 }
 .voo-cidade p {
     margin: 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     color: #333;
 }
 
 .voo-cidade span {
-    margin-top: 5px;
-    font-size: 14px;
+    margin-top: 0.3125em;
+    font-size: 0.875rem;
     color: #555;
 }
+
+
 
 .footer-container {
     display: flex;
@@ -575,7 +703,7 @@ h2 {
   }
 
 .footer-container-actions{
-    border: 1px solid #ededed;
+    border: 0.0625em solid #ededed;
     border-radius: 0.625em;
     width: 100%;
     padding: 0.625em;
@@ -587,7 +715,8 @@ h2 {
     margin: 1.25em;
 }
     
-.footer-container-action{
+.footer-container-action,
+.footer-container-action-900px {
     color: #2c2c2c;
     display: flex;
     flex-direction: column; 
@@ -596,6 +725,7 @@ h2 {
     padding: 0.625em;
     cursor: pointer;
     position: relative;
+    width: 100%;
 }
 
 
@@ -604,25 +734,31 @@ h2 {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1px; 
+    width: 0.0625em; 
     height: 100%;
     background-color: #ededed; 
 }
 
-.footer-container-action a {
+.footer-container-action a,
+.footer-container-action-900px a {
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: 'Lato', 'Lato-local-backup', 'Roboto', Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
-
-.footer-container-action a:hover {
+.footer-container-action a:hover,
+.footer-container-action-900px a:hover {
    color: #127045;
    text-decoration: underline;
+}
+
+.footer-container-action a img,
+.footer-container-action-900px a img{
+    width: 1.875em;
 }
 
 .footer-container-action a:hover .icon1{
@@ -635,66 +771,81 @@ h2 {
 .footer-container-action a:hover .icon3{
     content: url('hotel-fundo-verde.svg');
 }
-.footer-container-action a img{
-    width: 30px;
+
+.footer-container-action-900px a:hover .icon4{
+    content: url('security-fundo-verde.svg');
+}
+
+.footer-container-action-900px a:hover .icon5{
+    content: url('photo-camera-fundo-verde.svg');
+}
+
+.footer-container-action-900px {
+    display: none;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center; 
+}
+
+.footer-link a:hover{
+    text-decoration: underline; 
+}
+
+.img-link {
+    margin-left: 0.3125em; 
+    width: 1em; 
+    height: 1em;
+}
+
+@media screen and (min-width:900px) {
+
+
+    .footer-container-action-900px  {
+        display: flex; 
+    }
+    .footer-outros{
+        color: #127045;
+    }
+        
 }
 
 
-  .footer-link {
-    display: flex;
-    align-items: center; 
-  }
-  
-  .footer-link a:hover{
-    text-decoration: underline; 
-  }
-  
-  .img-link {
-    margin-left: 5px; 
-    width: 16px; 
-    height: 16px;
-  }
-  
-
 @media screen and (max-width:540px) {
-    .tipo-voo,
-    .tipo-dados,
-    .por-tipo-voo {
-        justify-content: flex-start; /* Alinha os items à esquerda */
-    }
+.tipo-voo,
+.tipo-dados,
+.por-tipo-voo {
+    justify-content: flex-start; /* Alinha os items à esquerda */
+}
 
-    .tipo-voo label,
-    .tipo-dados label,
-    .por-tipo-voo label {
-        text-align: left; /* Alinha o texto dentro do label à esquerda */
-        padding: 5px 0.625em; /* Ajusta o padding para alinhar o label corretamente */
-    }
+.tipo-voo label,
+.tipo-dados label,
+.por-tipo-voo label {
+    text-align: left; /* Alinha o texto dentro do label à esquerda */
+    padding: 0.3125em 0.625em; /* Ajusta o padding para alinhar o label corretamente */
+}
 }
 
 
 
 @media screen and (min-width:605px) {
 
-    .tipo-voo,
-    .tipo-dados,
-    .por-tipo-voo  {
-        justify-content: flex-start; /* Alinha os items à esquerda */
-    }
+.tipo-voo,
+.tipo-dados,
+.por-tipo-voo  {
+    justify-content: flex-start; /* Alinha os items à esquerda */
+}
 
-    .tipo-voo label,
-    .tipo-dados label,
-    .por-tipo-voo label {
-        text-align: left; /* Alinha o texto dentro do label à esquerda */
-        padding: 5px 1.25em; /* Ajusta o padding para alinhar o label corretamente */
-    }
-      
-
-    .container-viagem-data{
-        display: flex;
-    }
-    .data-texto{
-        font-style: italic;
-    }
+.tipo-voo label,
+.tipo-dados label,
+.por-tipo-voo label {
+    text-align: left; /* Alinha o texto dentro do label à esquerda */
+    padding: 0.3125em 1.25em; /* Ajusta o padding para alinhar o label corretamente */
+}
     
+
+
+
 }
 

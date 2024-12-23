@@ -7,7 +7,7 @@
 
     <!--CSS -->
     <link rel="stylesheet" href="main_css.css">  
-    <link rel="stylesheet" href="menu_css.css">  
+    <link rel="stylesheet" href="menu\menu_css.css">  
     <link rel="stylesheet" href="login.css">  
     <link rel="stylesheet" href="search_css.css">  
     <link rel="stylesheet" href="slider\slider.css"> 
@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
     
-    <script src="menu_js.js" defer></script>  
+    <script src="menu\menu_js.js" defer></script>  
     <script src="slider\slider.js" defer></script>  
     <script src="main.js"></script>
     <script src="container-actions\container-actions_js.js"></script>
@@ -34,7 +34,6 @@
         <p class="nota">4 / 5</p>
         <img src="img\right-arrow-previous-svgrepo-com.svg" class="seta-img">
         <p class="descricao">Estado de catastro na região na de Valencia</p>
-
         <a href="#VerTudo">Ver Tudo</a>
 
     </div>
@@ -576,32 +575,35 @@
                 </div>
                 <!-- Elementos adicionais escondidos inicialmente -->
                 <div class="expanded-content">
-                    <div class="tipo-voo">
-                            <div>
-                                <input type="radio" id="ida-volta" name="tipo-viagem" checked>
-                                <label for="ida-volta">Ida e volta</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="so-ida" name="tipo-viagem">
-                                <label for="so-ida">Só ida</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="multi-city" name="tipo-viagem">
-                                <label for="multi-city">Multi-city</label>
-                            </div>
-                    </div>
-                    
-                    <div class="checkbox-voo">
-                        <div class="checkbox-voo-item">
-                            <input type="checkbox" >
-                            <label for="pagar-milhas">Pagar com milhas</label>
+                    <div class="tipo-e-checkbox">
+                        <div class="tipo-voo">
+                                <div>
+                                    <input type="radio" id="ida-volta" name="tipo-viagem" checked>
+                                    <label for="ida-volta">Ida e volta</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="so-ida" name="tipo-viagem">
+                                    <label for="so-ida">Só ida</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="multi-city" name="tipo-viagem">
+                                    <label for="multi-city">Multi-city</label>
+                                </div>
                         </div>
-                        <div class="checkbox-voo-item">
-                            <input type="checkbox">
-                            <label for="melhores-ofertas">Mostrar todas as datas e melhores ofertas</label>
+                        
+                        <div class="checkbox-voo">
+                            <div class="checkbox-voo-item">
+                                <input type="checkbox" >
+                                <label for="pagar-milhas">Pagar com milhas</label>
+                            </div>
+                            <div class="checkbox-voo-item">
+                                <input type="checkbox">
+                                <label for="melhores-ofertas">Mostrar todas as datas e melhores ofertas</label>
+                            </div>
                         </div>
                     </div>
                     <div class="container-viagem">
+
                         <div class="container-viagem-origem">
                             <label for="origem">De:</label>
                             <div class="origem-container">
@@ -609,13 +611,16 @@
                                 <label for="origem" class="origem-texto">Lisbon, Portugal</label>
                             </div>
                         </div>
+
                         <div class="container-viagem-destino">
                             <label for="destino" class="destino-texto">Para onde?</label>
                         </div>
+
                         <div class="container-viagem-data">
                             <label for="data" class="data-texto">Quando?</label>
                         </div>
                     </div>
+
                     <div class="button-add-TAP">
                         <button>Adicionar um TAP Stopover gratuito</button>
                     </div>
@@ -683,34 +688,36 @@
                 </div>
                 <!-- Elementos adicionais escondidos inicialmente -->
                 <div class="expanded-content">
-                    <div class="container-login">
-                            <h1>Login</h1>
-                            <div class="container-p">
-                                <p>Para visualizar a lista dos seus voos para check-in.</p>
+                    <div class="container-viagens">
+                        <div class="container-login">
+                                <h1>Login</h1>
+                                <div class="container-p">
+                                    <p>Para visualizar a lista dos seus voos para check-in.</p>
+                                </div>
+                            <button>Login</button>
+                        </div>
+                        <div class="divisor">
+                            <span>OU</span>
+                        </div>           
+                        <div class="container-reserva">
+                            <h1>Insira os dados relativos à sua reserva</h1>
+                            <div class="tipo-dados">
+                                <div>
+                                    <input type="radio" id="referencia-reserva" name="tipo-dados" checked>
+                                    <label for="referencia-reserva">Referência da reserva</label>
+                                </div>
+                                <div>
+                                <input type="radio" id="numero-tap" name="tipo-dados">
+                                    <label for="numero-tap">Número TAP Miles&Go</label>
+                                </div>
+                            </div>    
+                            <div class="container-text">
+                                <input type="text" id="input1" placeholder="Número da referência" >                                                 
+                                <input type="text" id="input2" placeholder="Apelido">
                             </div>
-                        <button>Login</button>
+                            <button>Prosseguir</button>
+                        </div>
                     </div>
-                    <div class="divisor">
-                        <span>OU</span>
-                    </div>
-                    <div class="tipo-dados">
-                        <div>
-                            <input type="radio" id="referencia-reserva" name="tipo-dados" checked>
-                            <label for="referencia-reserva">Referência da reserva</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="numero-tap" name="tipo-dados">
-                            <label for="numero-tap">Número TAP Miles&Go</label>
-                        </div>
-                    </div>                
-                    <div class="container-reserva">
-                        <h1>Insira os dados relativos à sua reserva</h1>
-                        <div class="container-text">
-                            <input type="text" id="input1" placeholder="Número da referência" >                                                 
-                            <input type="text" id="input2" placeholder="Apelido">
-                        </div>
-                        <button>Prosseguir</button>
-                    </div> 
                 </div>          
             </div>
             <div class="container-action">
@@ -767,34 +774,33 @@
                         <div class="container-reserva">
                             <button id="prosseguir-btn">Prosseguir</button>
                         </div>
-                    
-                    <!-- Resultado do Voo -->
-                        <div id="resultado-voo" class="resultado" style="display: none;">
-                            <h2>Informações do Voo</h2>
-                            <div class="voos-container">
-                                <!-- Informações do Voo 1 -->
-                                <div class="voo">
-                                    <h3>Voo 1</h3>
-                                    <p>Número de Voo: <span id="numero-voo1"></span></p>
-                                    <p>Dia do Voo: <span id="dia-voo1"></span></p>
-                                    <p>Hora do Voo: <span id="hora-voo1"></span></p>
-                                    <p>Estado do Voo: <span id="estado-voo1"></span></p>
-                                </div>
-                            
-                                <!-- Informações do Voo 2 -->
-                                <div class="voo">
-                                    <h3>Voo 2</h3>
-                                    <p>Número de Voo: <span id="numero-voo2"></span></p>
-                                    <p>Dia do Voo: <span id="dia-voo2"></span></p>
-                                    <p>Hora do Voo: <span id="hora-voo2"></span></p>
-                                    <p>Estado do Voo: <span id="estado-voo2"></span></p>
-                                </div>
-                                <div class="voo-cidade">
-                                    <p>Cidade de Partida/Regresso:</p>
-                                    <span id="cidade-voo"></span>  
-                                </div>                      
-                            </div>                     
-                        </div>
+                    </div>
+                     <!-- Resultado do Voo -->
+                     <div id="resultado-voo" class="resultado" style="display: none;">
+                        <h2>Informações do Voo</h2>
+                        <div class="voos-container">
+                            <!-- Informações do Voo 1 -->
+                            <div class="voo">
+                                <h3>Voo 1</h3>
+                                <p>Número de Voo: <span id="numero-voo1"></span></p>
+                                <p>Dia do Voo: <span id="dia-voo1"></span></p>
+                                <p>Hora do Voo: <span id="hora-voo1"></span></p>
+                                <p>Estado do Voo: <span id="estado-voo1"></span></p>
+                            </div>
+                        
+                            <!-- Informações do Voo 2 -->
+                            <div class="voo">
+                                <h3>Voo 2</h3>
+                                <p>Número de Voo: <span id="numero-voo2"></span></p>
+                                <p>Dia do Voo: <span id="dia-voo2"></span></p>
+                                <p>Hora do Voo: <span id="hora-voo2"></span></p>
+                                <p>Estado do Voo: <span id="estado-voo2"></span></p>
+                            </div>
+                            <div class="voo-cidade">
+                                <p>Cidade de Partida/Regresso:</p>
+                                <span id="cidade-voo"></span>  
+                            </div>                      
+                        </div>                     
                     </div>
                 </div>
             </div>
@@ -809,13 +815,30 @@
                     <div class="footer-container-action">
                         <a>
                         <img class="icon2" src="container-actions\img\bus-fundo-branco.svg">
-                        Aluguer de automóveis
+                        Reservar transfer
                         </a>
                     </div>
                     <div class="footer-container-action">
                         <a>
                         <img class="icon3" src="container-actions\img\hotel-fundo-branco.svg">
-                        Aluguer de automóveis
+                        Reservar um hotel
+                        </a>
+                    </div>
+                    <div class="footer-container-action-900px">
+                        <a>
+                        <img class="icon4"src="container-actions\img\security-fundo-branco.svg">
+                        Adicionar seguro
+                        </a>
+                    </div>
+                    <div class="footer-container-action-900px">
+                        <a>
+                        <img class="icon5" src="container-actions\img\photo-camera-svgrepo-com.svg">
+                        Visitas & Atividades
+                        </a>
+                    </div>
+                    <div class="footer-container-action-900px">
+                        <a class="footer-outros">
+                        Todas as opções de reserva
                         </a>
                     </div>
                 </div>
