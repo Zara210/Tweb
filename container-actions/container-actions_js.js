@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+   // Verifica se a largura da tela é menor que 1024px
+   console.log(window.innerWidth )
+
     const containerActions = document.querySelectorAll('.container-action');
     const resultadoVooDiv = document.getElementById('resultado-voo');
 
     containerActions.forEach(container => {
         const headerContainer = container.querySelector('.header-container');
 
-       
         headerContainer.addEventListener('click', function () {
             // Fechar qualquer container aberto
             containerActions.forEach(otherContainer => {
@@ -20,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
             container.classList.toggle('expandido');
         });
     });
+
+
 
 
     document.getElementById('prosseguir-btn').addEventListener('click', function () {

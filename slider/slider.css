@@ -155,6 +155,34 @@
         position: relative;
         box-shadow: 0;
     }
+     /* Centraliza verticalmente, mas mantém alinhamento à esquerda */
+     .texto {
+        top: 30%; /* Centraliza verticalmente */
+        left: 5%; /* Alinha à esquerda */
+        font-size: 42px;
+
+    }
+    
+    /* Mostrar subtítulo e botão */
+    .subtitulo, .btn-slide {
+        display: block; /* Exibe os elementos */
+    }
+
+    .subtitulo {
+        font-size: 22px; /* Tamanho de fonte maior para a tela grande */
+        top: 35%;  /* Ajusta a posição do subtítulo */
+    }
+
+    .btn-slide {
+        top: 45%; /* Ajusta a posição do botão */
+    }
+    .indicadores {
+        position: absolute;
+        top: 53%;
+        left: 92%;
+        display: flex;
+        gap: 8px;
+    }
 }
 
 

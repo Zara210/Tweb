@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="slider\slider.css"> 
     <link rel="stylesheet" href="menu_dropdown\menu_dropdown.css">
     <link rel="stylesheet" href="container-actions.css">
+    <link rel="stylesheet" href="container-actions-pc.css">
     
 
     <!--Fontes-->
@@ -26,7 +27,8 @@
     <script src="menu\menu_js.js" defer></script>  
     <script src="slider\slider.js" defer></script>  
     <script src="main.js"></script>
-    <script src="container-actions\container-actions_js.js"></script>
+    <script src="container-actions\container-actions_js.js" defer ></script>
+    <script src="container-actions\container-js-pc.js" defer ></script>
 </head>
 <body>
     <div class="alerta-banner">
@@ -567,292 +569,430 @@
         </div>    
 
         <!-- Novo container abaixo do slider -->
-        <div class="container-actions">
-            <div class="container-action">
-                <div class="header-container">
-                    <img src="container-actions\img\calendar-days-svgrepo-com.svg">
-                    <a>Reservar um voo</a>
-                </div>
-                <!-- Elementos adicionais escondidos inicialmente -->
-                <div class="expanded-content">
-                    <div class="tipo-e-checkbox">
-                        <div class="tipo-voo">
-                                <div>
-                                    <input type="radio" id="ida-volta" name="tipo-viagem" checked>
-                                    <label for="ida-volta">Ida e volta</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="so-ida" name="tipo-viagem">
-                                    <label for="so-ida">Só ida</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="multi-city" name="tipo-viagem">
-                                    <label for="multi-city">Multi-city</label>
-                                </div>
+        <div class="container-resto">
+            <div class="container-actions">
+                <div class="container-actions-2">
+                    <div class="container-action">
+                        <div class="header-container">
+                            <img src="container-actions\img\calendar-days-svgrepo-com.svg">
+                            <a>Reservar um voo</a>
                         </div>
-                        
-                        <div class="checkbox-voo">
-                            <div class="checkbox-voo-item">
-                                <input type="checkbox" >
-                                <label for="pagar-milhas">Pagar com milhas</label>
+                        <!-- Elementos adicionais escondidos inicialmente -->
+                        <div class="expanded-content">
+                            <div class="tipo-e-checkbox">
+                                <div class="tipo-voo">
+                                        <div>
+                                            <input type="radio" id="ida-volta" name="tipo-viagem" checked>
+                                            <label for="ida-volta">Ida e volta</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="so-ida" name="tipo-viagem">
+                                            <label for="so-ida">Só ida</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="multi-city" name="tipo-viagem">
+                                            <label for="multi-city">Multi-city</label>
+                                        </div>
+                                </div>
+                                
+                                <div class="checkbox-voo">
+                                    <div class="checkbox-voo-item">
+                                        <input type="checkbox" >
+                                        <label for="pagar-milhas">Pagar com milhas</label>
+                                    </div>
+                                    <div class="checkbox-voo-item">
+                                        <input type="checkbox">
+                                        <label for="melhores-ofertas">Mostrar todas as datas e melhores ofertas</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="checkbox-voo-item">
-                                <input type="checkbox">
-                                <label for="melhores-ofertas">Mostrar todas as datas e melhores ofertas</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-viagem">
+                            <div class="container-viagem">
 
-                        <div class="container-viagem-origem">
-                            <label for="origem">De:</label>
-                            <div class="origem-container">
-                                <div class="codigo-lisboa">LIS</div>
-                                <label for="origem" class="origem-texto">Lisbon, Portugal</label>
-                            </div>
-                        </div>
-
-                        <div class="container-viagem-destino">
-                            <label for="destino" class="destino-texto">Para onde?</label>
-                        </div>
-
-                        <div class="container-viagem-data">
-                            <label for="data" class="data-texto">Quando?</label>
-                        </div>
-                    </div>
-
-                    <div class="button-add-TAP">
-                        <button>Adicionar um TAP Stopover gratuito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="container-action">
-                <div class="header-container">
-                    <img src="container-actions\img\bilhete.svg">
-                    <a>As minhas viagens</a>
-                </div>
-                <!-- Elementos adicionais escondidos inicialmente -->
-                <div class="expanded-content">
-                    <div class="container-viagens">
-                        <div class="container-login">
-                                <h1>Encontrar um formualrio de reserva existente</h1>
-                                <div class="container-p">
-                                    <p>Escolher um lugar</p>
-                                    <p>Adicionar peças de bagagem de porão</p>
-                                    <p>Visualizar os dados da reserva</p>
-                                    <p>Concluir a reserva com Time to Think</p>
+                                <div class="container-viagem-origem">
+                                    <label for="origem">De:</label>
+                                    <div class="origem-container">
+                                        <div class="codigo-lisboa">LIS</div>
+                                        <label for="origem" class="origem-texto">Lisbon, Portugal</label>
+                                    </div>
                                 </div>
-                            <button>Login</button>
-                        </div>
-                        <div class="divisor">
-                            <span>OU</span>
-                        </div>
-                        <div class="container-reserva">
-                            <h1>Insira os dados relativos à sua reserva</h1>
-                            <div class="container-text">
-                                <input type="text" id="input1" placeholder="Referência da reseva ou o núemro do bilhete" >                                                 
-                                <input type="text" id="input2" placeholder="Sobrenome" o>
-                            </div>
-                            <button>Encontrar reserva</button>
-                        </div>
-                    </div>
-                    <div class="container-links">
-                        <div class="link">
-                            <a>
-                                <img class="icon1" src="container-actions\img\money-bag-dollar-fundo-branco.svg" >
-                                Consulte e submeta o seu pedido de reembolso
-                                <img class="img-link" src="container-actions\img\external_link.svg">
-                            </a>
-                        </div>
-                        <div class="link">
-                            <a>
-                                <img class="icon2" src="container-actions\img\bill-list-fundo-branco.svg" >
-                                Pedir Fatura
-                                <img class="img-link" src="container-actions\img\external_link.svg">
-                            </a>
-                        </div>
-                        <div class="link">
-                            <a>
-                                <img class="icon3" src="container-actions/img/group-pessoas-fundo-branco.svg">
-                                Os meus pedidos de grupo
-                                <img class="img-link" src="container-actions\img\external_link.svg">
-                            </a>
-                        </div>
-                    </div>              
-                </div>
-            </div>
-            <div class="container-action">
-                <div class="header-container">
-                    <img src="container-actions\img\check-in.svg">
-                    <a>Check-in</a>
-                </div>
-                <!-- Elementos adicionais escondidos inicialmente -->
-                <div class="expanded-content">
-                    <div class="container-viagens">
-                        <div class="container-login">
-                                <h1>Login</h1>
-                                <div class="container-p">
-                                    <p>Para visualizar a lista dos seus voos para check-in.</p>
-                                </div>
-                            <button>Login</button>
-                        </div>
-                        <div class="divisor">
-                            <span>OU</span>
-                        </div>           
-                        <div class="container-reserva">
-                            <h1>Insira os dados relativos à sua reserva</h1>
-                            <div class="tipo-dados">
-                                <div>
-                                    <input type="radio" id="referencia-reserva" name="tipo-dados" checked>
-                                    <label for="referencia-reserva">Referência da reserva</label>
-                                </div>
-                                <div>
-                                <input type="radio" id="numero-tap" name="tipo-dados">
-                                    <label for="numero-tap">Número TAP Miles&Go</label>
-                                </div>
-                            </div>    
-                            <div class="container-text">
-                                <input type="text" id="input1" placeholder="Número da referência" >                                                 
-                                <input type="text" id="input2" placeholder="Apelido">
-                            </div>
-                            <button>Prosseguir</button>
-                        </div>
-                    </div>
-                </div>          
-            </div>
-            <div class="container-action">
-                <div class="header-container">
-                    <img src="container-actions\img\plane.svg" >
-                    <a>Estado do voo</a>
-                </div>
-            
-                <!-- Elementos adicionais escondidos inicialmente -->
-                <div class="expanded-content">
-                    <div class="por-tipo-voo">
-                        <div>
-                            <input type="radio" id="por-aeroporto" name="tipo-voo" checked>
-                            <label for="por-aeroporto">Por aeroporto</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="por-origem-destino" name="tipo-voo">
-                            <label for="por-origem-destino">Por origem e destino</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="por-voo" name="tipo-voo">
-                            <label for="por-voo">Por voo</label>
-                        </div>
-                    </div>
-                    <div class="container-estado-voo">
-                        <!-- Tipo de Voo -->
-                        <div class="container-tipo-voo">
-                            <img src="container-actions\img\plane-estado.svg">
-                            <div class="selecionar-tipo-voo">
-                                <label for="tipo-voo">Tipo de Vôo</label>
-                                <select id="tipo-voo" class="tipo-voo-select" required>
-                                    <option value="ida">Voo de ida</option>
-                                    <option value="regresso">Voo de regresso</option>
-                                </select>
-                            </div>
-                        </div>
 
-                        <!-- Seleção de Data -->
-                        <div class="container-datas">
-                            <img src="container-actions\img\calendar-days-fundo-branco.svg">
-                            <div class="selecionar-data">
-                                <label for="data-voo" class="destino-texto">Selecionar Datas</label>
-                                <input type="date" id="data-voo" required>
+                                <div class="container-viagem-destino">
+                                    <label for="destino" class="destino-texto">Para onde?</label>
+                                </div>
+
+                                <div class="container-viagem-data">
+                                    <label for="data" class="data-texto">Quando?</label>
+                                </div>
                             </div>
+
+                            <div class="button-add-TAP">
+                                <button>Adicionar um TAP Stopover gratuito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-action">
+                        <div class="header-container">
+                            <img src="container-actions\img\bilhete.svg">
+                            <a>As minhas viagens</a>
+                        </div>
+                        <!-- Elementos adicionais escondidos inicialmente -->
+                        <div class="expanded-content">
+                            <div class="container-viagens">
+                                <div class="container-login">
+                                        <h1>Encontrar um formualrio de reserva existente</h1>
+                                        <div class="container-p">
+                                            <p>Escolher um lugar</p>
+                                            <p>Adicionar peças de bagagem de porão</p>
+                                            <p>Visualizar os dados da reserva</p>
+                                            <p>Concluir a reserva com Time to Think</p>
+                                        </div>
+                                    <button>Login</button>
+                                </div>
+                                <div class="divisor">
+                                    <span>OU</span>
+                                </div>
+                                <div class="container-reserva">
+                                    <h1>Insira os dados relativos à sua reserva</h1>
+                                    <div class="container-text">
+                                        <input type="text" id="input1" placeholder="Referência da reseva ou o núemro do bilhete" >                                                 
+                                        <input type="text" id="input2" placeholder="Sobrenome" o>
+                                    </div>
+                                    <button>Encontrar reserva</button>
+                                </div>
+                            </div>
+                            <div class="container-links">
+                                <div class="link">
+                                    <a>
+                                        <img class="icon1" src="container-actions\img\money-bag-dollar-fundo-branco.svg" >
+                                        Consulte e submeta o seu pedido de reembolso
+                                        <img class="img-link" src="container-actions\img\external_link.svg">
+                                    </a>
+                                </div>
+                                <div class="link">
+                                    <a>
+                                        <img class="icon2" src="container-actions\img\bill-list-fundo-branco.svg" >
+                                        Pedir Fatura
+                                        <img class="img-link" src="container-actions\img\external_link.svg">
+                                    </a>
+                                </div>
+                                <div class="link">
+                                    <a>
+                                        <img class="icon3" src="container-actions/img/group-pessoas-fundo-branco.svg">
+                                        Os meus pedidos de grupo
+                                        <img class="img-link" src="container-actions\img\external_link.svg">
+                                    </a>
+                                </div>
+                            </div>              
+                        </div>
+                    </div>
+                    <div class="container-action">
+                        <div class="header-container">
+                            <img src="container-actions\img\check-in.svg">
+                            <a>Check-in</a>
+                        </div>
+                        <!-- Elementos adicionais escondidos inicialmente -->
+                        <div class="expanded-content">
+                            <div class="container-viagens">
+                                <div class="container-login">
+                                        <h1>Login</h1>
+                                        <div class="container-p">
+                                            <p>Para visualizar a lista dos seus voos para check-in.</p>
+                                        </div>
+                                    <button>Login</button>
+                                </div>
+                                <div class="divisor">
+                                    <span>OU</span>
+                                </div>           
+                                <div class="container-reserva">
+                                    <h1>Insira os dados relativos à sua reserva</h1>
+                                    <div class="tipo-dados">
+                                        <div>
+                                            <input type="radio" id="referencia-reserva" name="tipo-dados" checked>
+                                            <label for="referencia-reserva">Referência da reserva</label>
+                                        </div>
+                                        <div>
+                                        <input type="radio" id="numero-tap" name="tipo-dados">
+                                            <label for="numero-tap">Número TAP Miles&Go</label>
+                                        </div>
+                                    </div>    
+                                    <div class="container-text">
+                                        <input type="text" id="input1" placeholder="Número da referência" >                                                 
+                                        <input type="text" id="input2" placeholder="Apelido">
+                                    </div>
+                                    <button>Prosseguir</button>
+                                </div>
+                            </div>
+                        </div>          
+                    </div>
+                    <div class="container-action">
+                        <div class="header-container">
+                            <img src="container-actions\img\plane.svg" >
+                            <a>Estado do voo</a>
                         </div>
                     
-                        <!-- Cidade de Partida/Regresso -->
-                        <div class="container-cidade">
-                            <label for="data-voo" class="destino-texto">De onde?</label>
-                            <input type="text" id="cidade" placeholder="Lisboa" required>
-                        </div>
-                    
-                        <!-- Botão de Prosseguir -->
-                        <div class="container-reserva">
-                            <button id="prosseguir-btn">Prosseguir</button>
-                        </div>
-                    </div>
-                     <!-- Resultado do Voo -->
-                     <div id="resultado-voo" class="resultado" style="display: none;">
-                        <h2>Informações do Voo</h2>
-                        <div class="voos-container">
-                            <!-- Informações do Voo 1 -->
-                            <div class="voo">
-                                <h3>Voo 1</h3>
-                                <p>Número de Voo: <span id="numero-voo1"></span></p>
-                                <p>Dia do Voo: <span id="dia-voo1"></span></p>
-                                <p>Hora do Voo: <span id="hora-voo1"></span></p>
-                                <p>Estado do Voo: <span id="estado-voo1"></span></p>
+                        <!-- Elementos adicionais escondidos inicialmente -->
+                        <div class="expanded-content">
+                            <div class="por-tipo-voo">
+                                <div>
+                                    <input type="radio" id="por-aeroporto" name="tipo-voo" checked>
+                                    <label for="por-aeroporto">Por aeroporto</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="por-origem-destino" name="tipo-voo">
+                                    <label for="por-origem-destino">Por origem e destino</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="por-voo" name="tipo-voo">
+                                    <label for="por-voo">Por voo</label>
+                                </div>
                             </div>
-                        
-                            <!-- Informações do Voo 2 -->
-                            <div class="voo">
-                                <h3>Voo 2</h3>
-                                <p>Número de Voo: <span id="numero-voo2"></span></p>
-                                <p>Dia do Voo: <span id="dia-voo2"></span></p>
-                                <p>Hora do Voo: <span id="hora-voo2"></span></p>
-                                <p>Estado do Voo: <span id="estado-voo2"></span></p>
+                            <div class="container-estado-voo">
+                                <!-- Tipo de Voo -->
+                                <div class="container-tipo-voo">
+                                    <img src="container-actions\img\plane-estado.svg">
+                                    <div class="selecionar-tipo-voo">
+                                        <label for="tipo-voo">Tipo de Vôo</label>
+                                        <select id="tipo-voo" class="tipo-voo-select" required>
+                                            <option value="ida">Voo de ida</option>
+                                            <option value="regresso">Voo de regresso</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Seleção de Data -->
+                                <div class="container-datas">
+                                    <img src="container-actions\img\calendar-days-fundo-branco.svg">
+                                    <div class="selecionar-data">
+                                        <label for="data-voo" class="destino-texto">Selecionar Datas</label>
+                                        <input type="date" id="data-voo" required>
+                                    </div>
+                                </div>
+                            
+                                <!-- Cidade de Partida/Regresso -->
+                                <div class="container-cidade">
+                                    <label for="data-voo" class="destino-texto">De onde?</label>
+                                    <input type="text" id="cidade" placeholder="Lisboa" required>
+                                </div>
+                            
+                                <!-- Botão de Prosseguir -->
+                                <div class="container-reserva">
+                                    <button id="prosseguir-btn">Prosseguir</button>
+                                </div>
                             </div>
-                            <div class="voo-cidade">
-                                <p>Cidade de Partida/Regresso:</p>
-                                <span id="cidade-voo"></span>  
-                            </div>                      
-                        </div>                     
+                            <!-- Resultado do Voo -->
+                            <div id="resultado-voo" class="resultado" style="display: none;">
+                                <h2>Informações do Voo</h2>
+                                <div class="voos-container">
+                                    <!-- Informações do Voo 1 -->
+                                    <div class="voo">
+                                        <h3>Voo 1</h3>
+                                        <p>Número de Voo: <span id="numero-voo1"></span></p>
+                                        <p>Dia do Voo: <span id="dia-voo1"></span></p>
+                                        <p>Hora do Voo: <span id="hora-voo1"></span></p>
+                                        <p>Estado do Voo: <span id="estado-voo1"></span></p>
+                                    </div>
+                                
+                                    <!-- Informações do Voo 2 -->
+                                    <div class="voo">
+                                        <h3>Voo 2</h3>
+                                        <p>Número de Voo: <span id="numero-voo2"></span></p>
+                                        <p>Dia do Voo: <span id="dia-voo2"></span></p>
+                                        <p>Hora do Voo: <span id="hora-voo2"></span></p>
+                                        <p>Estado do Voo: <span id="estado-voo2"></span></p>
+                                    </div>
+                                    <div class="voo-cidade">
+                                        <p>Cidade de Partida/Regresso:</p>
+                                        <span id="cidade-voo"></span>  
+                                    </div>                      
+                                </div>                     
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-container">
-                <div class="footer-container-actions">
-                    <div class="footer-container-action">
-                        <a>
-                        <img class="icon1"src="container-actions\img\car-fundo-branco.svg">
-                        Aluguer de automóveis
-                        </a>
+                <div class="footer-container">
+                    <div class="footer-container-actions">
+                        <div class="footer-container-action">
+                            <a>
+                            <img class="icon1"src="container-actions\img\car-fundo-branco.svg">
+                            Aluguer de automóveis
+                            </a>
+                        </div>
+                        <div class="footer-container-action">
+                            <a>
+                            <img class="icon2" src="container-actions\img\bus-fundo-branco.svg">
+                            Reservar transfer
+                            </a>
+                        </div>
+                        <div class="footer-container-action">
+                            <a>
+                            <img class="icon3" src="container-actions\img\hotel-fundo-branco.svg">
+                            Reservar um hotel
+                            </a>
+                        </div>
+                        <div class="footer-container-action-900px">
+                            <a>
+                            <img class="icon4"src="container-actions\img\security-fundo-branco.svg">
+                            Adicionar seguro
+                            </a>
+                        </div>
+                        <div class="footer-container-action-900px">
+                            <a>
+                            <img class="icon5" src="container-actions\img\photo-camera-svgrepo-com.svg">
+                            Visitas & Atividades
+                            </a>
+                        </div>
+                        <div class="footer-container-action-900px">
+                            <a class="footer-outros">
+                            Todas as opções de reserva
+                            </a>
+                        </div>
                     </div>
-                    <div class="footer-container-action">
-                        <a>
-                        <img class="icon2" src="container-actions\img\bus-fundo-branco.svg">
-                        Reservar transfer
-                        </a>
-                    </div>
-                    <div class="footer-container-action">
-                        <a>
-                        <img class="icon3" src="container-actions\img\hotel-fundo-branco.svg">
-                        Reservar um hotel
-                        </a>
-                    </div>
-                    <div class="footer-container-action-900px">
-                        <a>
-                        <img class="icon4"src="container-actions\img\security-fundo-branco.svg">
-                        Adicionar seguro
-                        </a>
-                    </div>
-                    <div class="footer-container-action-900px">
-                        <a>
-                        <img class="icon5" src="container-actions\img\photo-camera-svgrepo-com.svg">
-                        Visitas & Atividades
-                        </a>
-                    </div>
-                    <div class="footer-container-action-900px">
-                        <a class="footer-outros">
+                    <!-- Adicione o conteúdo desejado aqui -->
+                    <div class="footer-link">
+                    <a>
                         Todas as opções de reserva
-                        </a>
+                        <img class="img-link" src="container-actions/img/external_link.svg">
+                    </a>
                     </div>
                 </div>
-                <!-- Adicione o conteúdo desejado aqui -->
-                <div class="footer-link">
-                  <a>
-                    Todas as opções de reserva
-                    <img class="img-link" src="container-actions/img/external_link.svg">
-                  </a>
-                </div>
             </div>
-              
         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+        
+        <!-- Novo container abaixo do slider - PC -->
+        <div class="container-pc">
+            <div class="container-actions">
+                <div class="container-actions-2">  
+                    <div class="headers-containers">
+                        <div class="header-container" id="reservar-voo-header">
+                            <img src="container-actions/img/calendar-days-svgrepo-com.svg">
+                            <a>Reservar um voo</a>
+                        </div>
+
+                        <div class="header-container" id="minhas-viagens-header">
+                            <img src="container-actions/img/bilhete.svg">
+                            <a>As minhas viagens</a>
+                        </div>
+                    </div>
+                    <div class="container-action" id="reserva-voo-container" style="display: none;">
+                        <!-- Elementos adicionais escondidos inicialmente -->
+                        <div class="expanded-content">
+                            <div class="tipo-e-checkbox">
+                                <div class="tipo-voo">
+                                        <div>
+                                            <input type="radio" id="ida-volta" name="tipo-viagem" checked>
+                                            <label for="ida-volta">Ida e volta</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="so-ida" name="tipo-viagem">
+                                            <label for="so-ida">Só ida</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="multi-city" name="tipo-viagem">
+                                            <label for="multi-city">Multi-city</label>
+                                        </div>
+                                </div>
+                                
+                                <div class="checkbox-voo">
+                                    <div class="checkbox-voo-item">
+                                        <input type="checkbox" >
+                                        <label for="pagar-milhas">Pagar com milhas</label>
+                                    </div>
+                                    <div class="checkbox-voo-item">
+                                        <input type="checkbox">
+                                        <label for="melhores-ofertas">Mostrar todas as datas e melhores ofertas</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-viagem">
+
+                                <div class="container-viagem-origem">
+                                    <label for="origem">De:</label>
+                                    <div class="origem-container">
+                                        <div class="codigo-lisboa">LIS</div>
+                                        <label for="origem" class="origem-texto">Lisbon, Portugal</label>
+                                    </div>
+                                </div>
+
+                                <div class="container-viagem-destino">
+                                    <label for="destino" class="destino-texto">Para onde?</label>
+                                </div>
+
+                                <div class="container-viagem-data">
+                                    <label for="data" class="data-texto">Quando?</label>
+                                </div>
+                            </div>
+
+                            <div class="button-add-TAP">
+                                <button>Adicionar um TAP Stopover gratuito</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-action">
+                        <!-- Elementos adicionais escondidos inicialmente -->
+                        <div class="expanded-content">
+                            <div class="container-viagens">
+                                <div class="container-login">
+                                        <h1>Encontrar um formualrio de reserva existente</h1>
+                                        <div class="container-p">
+                                            <p>Escolher um lugar</p>
+                                            <p>Adicionar peças de bagagem de porão</p>
+                                            <p>Visualizar os dados da reserva</p>
+                                            <p>Concluir a reserva com Time to Think</p>
+                                        </div>
+                                    <button>Login</button>
+                                </div>
+                                <div class="divisor">
+                                    <span>OU</span>
+                                </div>
+                                <div class="container-reserva">
+                                    <h1>Insira os dados relativos à sua reserva</h1>
+                                    <div class="container-text">
+                                        <input type="text" id="input1" placeholder="Referência da reseva ou o núemro do bilhete" >                                                 
+                                        <input type="text" id="input2" placeholder="Sobrenome" o>
+                                    </div>
+                                    <button>Encontrar reserva</button>
+                                </div>
+                            </div>
+                            <div class="container-links">
+                                <div class="link">
+                                    <a>
+                                        <img class="icon1" src="container-actions\img\money-bag-dollar-fundo-branco.svg" >
+                                        Consulte e submeta o seu pedido de reembolso
+                                        <img class="img-link" src="container-actions\img\external_link.svg">
+                                    </a>
+                                </div>
+                                <div class="link">
+                                    <a>
+                                        <img class="icon2" src="container-actions\img\bill-list-fundo-branco.svg" >
+                                        Pedir Fatura
+                                        <img class="img-link" src="container-actions\img\external_link.svg">
+                                    </a>
+                                </div>
+                                <div class="link">
+                                    <a>
+                                        <img class="icon3" src="container-actions/img/group-pessoas-fundo-branco.svg">
+                                        Os meus pedidos de grupo
+                                        <img class="img-link" src="container-actions\img\external_link.svg">
+                                    </a>
+                                </div>
+                            </div>              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <p>1</p><br>
         <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br> <p>1</p><br>    
