@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
    // Verifica se a largura da tela é menor que 1024px
    console.log(window.innerWidth )
 
+   // Verifica se a largura da tela é menor que 1024px
+   console.log(window.innerWidth )
+
     const containerActions = document.querySelectorAll('.container-action');
     const resultadoVooDiv = document.getElementById('resultado-voo');
 

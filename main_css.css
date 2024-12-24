@@ -22,13 +22,6 @@ body.menu-open {
     height: 2.5em;    
 }
 
-@media screen and (min-width:1024px) {
-    
-    .login-btn img {
-        width: 30px;
-        height: auto;    
-    }
-}
 
 .search-btn {
     color: black;
@@ -238,6 +231,7 @@ footer {
     
 }
 
+
 @media screen and (min-width: 1023px) {
     .custom-nav-bar {
         display: flex;
@@ -272,6 +266,15 @@ footer {
         text-decoration: none;  /* Removendo sublinhado padrão */
         transition: color 0.3s ease;
     }
+
+    .login-btn img {
+        width: 40px;
+        height: auto;    
+        
+    }
+    .nav-btn.login-btn{
+        margin-right: 20px;
+    } 
     
     nav {
         position: fixed;
@@ -331,6 +334,9 @@ footer {
         height: 5em;
         width: 5em;
     }
+    .logo_branco{
+        display: none;
+    }
 }
 
 @media screen and (min-width:1148px){
@@ -341,6 +347,7 @@ footer {
 
     .logo_branco {
         display: flex;
+        justify-content: flex-start;
         max-height: 1.25em;
         width: auto;
         margin: 1.25em
