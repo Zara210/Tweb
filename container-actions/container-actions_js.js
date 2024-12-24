@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+    
+
+   // Verifica se a largura da tela é menor que 1024px
+   console.log(window.innerWidth )
 
     const containerActions = document.querySelectorAll('.container-action');
     const resultadoVooDiv = document.getElementById('resultado-voo');
@@ -6,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
     containerActions.forEach(container => {
         const headerContainer = container.querySelector('.header-container');
 
-       
         headerContainer.addEventListener('click', function () {
             // Fechar qualquer container aberto
             containerActions.forEach(otherContainer => {
@@ -20,6 +23,13 @@ document.addEventListener('DOMContentLoaded', function () {
             container.classList.toggle('expandido');
         });
     });
+
+
+    document.querySelectorAll(".container-reserva button").forEach((button) => {
+        button.addEventListener("click", function () {
+          console.log(`${this.id} foi clicado!`);
+        });
+      });
 
 
     document.getElementById('prosseguir-btn').addEventListener('click', function () {

@@ -6,7 +6,7 @@
     display: flex;
     justify-content: flex-start;
     flex-grow: 1;
-    margin-left: 3.125em;
+    margin-left: 2.125em;
     
 }
 
@@ -22,12 +22,13 @@
     margin-right: 0;
 }
 
-.nav-link-item > a {
+.nav-link-item  a {
     color: white;
     text-decoration: none;
     display: block;
     background-color: transparent;
     padding: 10px 10px;
+    font-family: 'Lato', "Lucida Grande", Tahoma, sans-serif;
 }
 
 .nav-link-item > a::after {
@@ -211,7 +212,11 @@
     
 }
 
-@media screen and (min-width:1125px) {
+@media screen and (min-width:1148px) {
+    .nav-links {
+        margin-left: 1.125em;
+        
+    }
     .dropdown{
         width: 1001px;
         height: auto;

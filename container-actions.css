@@ -1,13 +1,22 @@
 /*Container*/
 .container-actions { 
-    margin: 0 0.625em;
+    margin: 1.625em 0.625em;
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
+.container-pc{
+    display: none;
+}
+
+.container-actions-2{
+    border: 3px solid #127045;
+}
+
 .container-action {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: #f5f5f5;
     margin: 0.3125em;
@@ -21,7 +30,6 @@
 .container-action.expandido {
     border-top: 0.5625em solid #72be44;
     background-color: #f5f5f5;
-    flex-direction: column;
     padding: 0.625em;
     width: 100%;
     margin: 0 auto;  
@@ -48,6 +56,7 @@
     width: 100%;
     padding: 0.9375em 0.3125em;
     cursor: pointer;
+   
 }
 
 /* Inicialmente sem a borda no <a> */
@@ -57,6 +66,26 @@
     padding: 0.3125em;
     font-family: 'Montserrat', 'Montserrat-local-backup', Arial, Helvetica, sans-serif;
     cursor: pointer;
+}
+
+
+
+/*Expandido*/
+.expanded-content {
+    margin-top: 0.625em;
+    max-height: 0; /* Começa com altura 0 */
+    opacity: 0; /* Começa invisível */
+    overflow: hidden; /* Esconde qualquer conteúdo além do limite */
+    width: 100%;
+    text-align: left;
+    transition: max-height 0s ease, opacity 0.6s ease; /* Sem animação de max-height, animação de opacidade */
+}
+
+/* Quando expandido, torna a altura normal e visível */
+.container-action.expandido .expanded-content {
+    max-height: 1000px; /* Limite alto suficiente para o conteúdo */
+    opacity: 1; /* Tornar visível */
+    transition: max-height 0.3s ease, opacity 0.6s ease; /* Animação apenas para max-height ao expandir */
 }
 
 /* A borda começa com largura 0 e é posicionada na parte superior */
@@ -71,22 +100,9 @@
     transition: width 0.3s ease; 
 }
 
-/* Ao adicionar a classe expandido ao container-action, a borda vai até 33% */
+/* Ao adicionar a classe expandido ao container-action, a  */
 .container-action.expandido .header-container a::before {
     width: 1.5625em; 
-}
-
-
-/*Expandido*/
-.expanded-content {
-    margin-top: 0.625em;
-    display: none;
-    width: 100%;
-    text-align: left;
-}
-
-.container-action.expandido .expanded-content {
-    display: block;
 }
 
 
@@ -107,7 +123,7 @@
         color: white;
         cursor: pointer; 
         border: none; 
-        transition: border-top 0.3s ease;
+        transition: all 0.6s ease; /* Transição suave para todas as propriedades */
     }
 
     /* Quando expandido, não exibe a borda verde */
@@ -119,9 +135,97 @@
         width: 100%;
         margin: 0 auto;  
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  
+
     }
 }
 
+
+@media screen and (min-width:1024px) {
+    
+    .container-pc{
+        display: flex;
+    }
+    .container-resto{
+        display: none;
+    }
+
+    .container-actions {
+        width: 94vw;
+        position: absolute;
+        top: 330px; 
+        left: 50%;
+        transform: translateX(-51%); /* Corrige o deslocamento horizontal */
+        display: flex;
+        box-sizing: border-box; /* Inclui padding/border no tamanho */
+    }
+
+
+    .container-actions-2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Ocupa toda a largura disponível */
+        background-color: #f5f5f5; /* Fundo para estética */
+        border: 3px saddlebrown solid;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+
+      .headers-containers{
+        border: 3px solid rgb(0, 241, 88);
+        display: flex;
+        flex-direction: row;
+        width: 100%; 
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .headers-containers img {
+        width: 1.875em;
+        margin-right: 0.625em;
+    }
+    .headers-containers a {
+        text-decoration: none;
+        color: #2c2c2c;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Montserrat', 'Montserrat-local-backup', Arial, Helvetica, sans-serif;
+    }
+        
+
+    .header-container {
+        padding: 0.9375em 0; /* Espaçamento interno */
+        border: 3px solid bl; /* Apenas para visualização */
+        margin: 0; /* Remove qualquer margem extra */
+        flex-grow: 1;
+        border: 2px solid blue;
+    }
+    
+    .container-action{
+        display: none;
+        border: 9px solid rgb(255, 0, 225);
+    }
+
+    .container-action .expanded-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Espaçamento entre os elementos */
+    }
+    
+    
+        
+    .container-actions p{
+        color: black;
+    }
+
+}
+
+
+
+@media screen and (min-width:1210px) {
+    
+}
 
 /*Reservar um Voo*/
 
@@ -313,7 +417,7 @@
 /* Botão */
 .button-add-TAP button {
     display: block;
-    width: 95%;
+    width: 97%;
     margin: 0.625em auto 0;
     padding: 0.625em 1.25em;
     background-color: white;
