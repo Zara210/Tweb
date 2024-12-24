@@ -63,7 +63,7 @@
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    padding: 17px 16px;
+    padding: 12px;
     cursor: pointer;
     align-items: center; /* Alinha os itens na vertical */
 }
@@ -80,6 +80,7 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    padding: 5px;
 }
 
 /* Borda inferior apenas nos itens principais */
@@ -108,7 +109,7 @@
     flex-direction: column;
     width: 100%;
     position: relative;
-    margin-top: 16px;
+    margin-top: 15px;
 }
 .submenu li a {
     color: #3a970e;
@@ -124,12 +125,10 @@
     display: flex;
 }
 
-/* Estilo geral da seta */
-.arrow {
-    font-size: 54px;
-    font-weight: 300; 
-    color: #3a970e; 
-    transform: rotate(90deg); 
+/* Estilo da seta */
+.arrow img {
+    width: 25px;
+    height: auto;
 }
 
 /* Reduzindo a distância entre o submenu e o sub-submenu */
@@ -207,7 +206,7 @@ nav.menu-open .menu-container {
 
 
 /* Responsividade */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     /* Mostrar/Esconder menu */
     nav.menu-open .nav-buttons > .nav-btn {
         display: none;
@@ -227,7 +226,7 @@ nav.menu-open .menu-container {
         right: 0;
         width: 50%;
         height: 100dvh;
-        max-height: calc(100dvh - 60px);
+        max-height: calc(100dvh - 70px);
         background-color: white;
     }
     
@@ -246,4 +245,12 @@ nav.menu-open .menu-container {
     nav.menu-open .nav-buttons .close-btn {
         display: flex;
     }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .menu-container{
+        display: none;
+    }
+
 }
