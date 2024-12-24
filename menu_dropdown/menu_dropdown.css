@@ -6,7 +6,7 @@
     display: flex;
     justify-content: flex-start;
     flex-grow: 1;
-    margin-left: 1.125em;
+    margin-left: 2.125em;
     
 }
 
@@ -28,6 +28,7 @@
     display: block;
     background-color: transparent;
     padding: 10px 10px;
+    font-family: 'Lato', "Lucida Grande", Tahoma, sans-serif;
 }
 
 .nav-link-item > a::after {
@@ -211,9 +212,13 @@
     
 }
 
-@media screen and (min-width:1125px) {
+@media screen and (min-width:1148px) {
+    .nav-links {
+        margin-left: 1.125em;
+        
+    }
     .dropdown{
-        width: 1001px;
+        width: 1101px;
         height: auto;
     }
     
@@ -221,7 +226,7 @@
 
 @media screen and (min-width:1200px) {
     .dropdown{
-        width: auto;
+        width: 1001px;
         height: auto;
     }
     

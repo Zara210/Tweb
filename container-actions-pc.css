@@ -36,8 +36,6 @@
         display: flex;
         flex-direction: row;
         width: 100%; 
-        padding: 15px;
-        margin: 15px;
     }
 
     .headers-containers img {
@@ -63,7 +61,7 @@
     
     .container-action{
         display: none;
-        border: 9px solid rgb(255, 0, 225);
+        border: 1px solid rgb(255, 0, 225);
     }
 
     .container-action .expanded-content {
